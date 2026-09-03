@@ -1,22 +1,1084 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Gymetry Terms of Service</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10051f">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Terms of Service for the Gymeflix fitness and workout application.">
+  <title>Terms of Service | Gymeflix</title>
+  <style>
+    :root {
+      --bg: #08040f;
+      --panel: rgba(27, 12, 49, 0.76);
+      --text: #f7f1ff;
+      --muted: #c8b7d9;
+      --purple: #a855f7;
+      --violet: #7c3aed;
+      --pink: #ec4899;
+      --cyan: #55e6ff;
+      --orange: #ffad5a;
+      --border: rgba(196, 141, 255, 0.2);
+      --border-strong: rgba(196, 141, 255, 0.42);
+      --shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
+      --radius: 24px;
+      --content: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 32px;
+    }
+
+    body {
+      margin: 0;
+      min-width: 300px;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 8% 4%, rgba(124, 58, 237, 0.25), transparent 31rem),
+        radial-gradient(circle at 92% 18%, rgba(236, 72, 153, 0.13), transparent 26rem),
+        linear-gradient(145deg, #07030d 0%, #10051f 50%, #07030e 100%);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.72;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      opacity: 0.18;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(168, 85, 247, 0.14) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(168, 85, 247, 0.14) 1px, transparent 1px);
+      background-size: 52px 52px;
+      mask-image: linear-gradient(to bottom, black, transparent 76%);
+    }
+
+    a {
+      color: #c999ff;
+      text-underline-offset: 4px;
+      text-decoration-thickness: 1px;
+    }
+
+    a:hover,
+    a:focus-visible { color: var(--cyan); }
+
+    :focus-visible {
+      outline: 3px solid var(--cyan);
+      outline-offset: 4px;
+      border-radius: 6px;
+    }
+
+    .progress {
+      position: fixed;
+      inset: 0 auto auto 0;
+      z-index: 20;
+      width: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--violet), var(--pink), var(--cyan));
+      box-shadow: 0 0 18px rgba(85, 230, 255, 0.75);
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 50;
+      padding: 10px 16px;
+      color: #12051f;
+      background: var(--cyan);
+      border-radius: 999px;
+      font-weight: 800;
+      transform: translateY(-150%);
+    }
+
+    .skip-link:focus { transform: translateY(0); }
+
+    .wrap {
+      width: min(calc(100% - 36px), var(--content));
+      margin-inline: auto;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 76px 0 48px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: -14rem;
+      left: 50%;
+      width: 36rem;
+      height: 36rem;
+      border: 1px solid rgba(196, 141, 255, 0.18);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 4rem rgba(124, 58, 237, 0.025),
+        0 0 0 8rem rgba(124, 58, 237, 0.02);
+      transform: translateX(-50%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      justify-items: center;
+      text-align: center;
+    }
+
+    .logo-placeholder {
+      display: grid;
+      width: 88px;
+      height: 88px;
+      place-items: center;
+      margin-bottom: 24px;
+      border: 1px solid var(--border-strong);
+      border-radius: 26px;
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0)),
+        rgba(19, 7, 34, 0.9);
+      box-shadow:
+        inset 0 0 24px rgba(168, 85, 247, 0.15),
+        0 0 32px rgba(124, 58, 237, 0.24);
+      color: #d9b9ff;
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 15px;
+      color: #d9c2f2;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 14px var(--cyan);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.8rem, 8vw, 5.8rem);
+      line-height: 0.98;
+      letter-spacing: -0.065em;
+      background: linear-gradient(100deg, #ffffff 10%, #d7afff 55%, #79ebff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .lede {
+      max-width: 760px;
+      margin: 25px auto 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.2vw, 1.18rem);
+    }
+
+    .meta-row,
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .chip {
+      padding: 8px 13px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: #dbcce9;
+      background: rgba(20, 8, 35, 0.66);
+      font-size: 13px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 10px 18px;
+      border: 1px solid var(--border-strong);
+      border-radius: 14px;
+      color: var(--text);
+      background: rgba(31, 13, 54, 0.7);
+      font-weight: 800;
+      text-decoration: none;
+      transition: border-color 160ms ease, transform 160ms ease, background 160ms ease;
+    }
+
+    .button.primary {
+      border-color: transparent;
+      background: linear-gradient(110deg, #7133db, #b83cc3);
+      box-shadow: 0 12px 30px rgba(124, 58, 237, 0.26);
+    }
+
+    .button:hover {
+      color: white;
+      border-color: rgba(85, 230, 255, 0.56);
+      background-color: rgba(44, 21, 72, 0.9);
+      transform: translateY(-2px);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 255px minmax(0, 1fr);
+      gap: 34px;
+      padding: 44px 0 70px;
+      align-items: start;
+    }
+
+    .toc {
+      position: sticky;
+      top: 24px;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: rgba(17, 7, 31, 0.78);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .toc-title {
+      margin: 0 0 12px;
+      color: white;
+      font-size: 13px;
+      font-weight: 850;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .toc ol {
+      display: grid;
+      gap: 3px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: item;
+    }
+
+    .toc li { counter-increment: item; }
+
+    .toc a {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 7px;
+      padding: 6px 4px;
+      border-radius: 8px;
+      color: #baa9ca;
+      font-size: 13px;
+      line-height: 1.35;
+      text-decoration: none;
+    }
+
+    .toc a::before {
+      content: counter(item, decimal-leading-zero);
+      color: #8659ab;
+      font-size: 10px;
+      font-weight: 850;
+      padding-top: 2px;
+    }
+
+    .toc a:hover,
+    .toc a.active {
+      color: white;
+      background: rgba(168, 85, 247, 0.11);
+    }
+
+    main { min-width: 0; }
+
+    .notice,
+    .section {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .notice {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 20px;
+      padding: 26px;
+    }
+
+    .notice::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: linear-gradient(var(--purple), var(--cyan));
+    }
+
+    .notice strong {
+      display: block;
+      margin-bottom: 4px;
+      color: white;
+      font-size: 1.05rem;
+    }
+
+    .notice p { margin: 0; }
+
+    .section {
+      margin-bottom: 20px;
+      padding: clamp(25px, 5vw, 42px);
+    }
+
+    .section-number {
+      display: inline-grid;
+      min-width: 36px;
+      height: 28px;
+      place-items: center;
+      margin-bottom: 15px;
+      border: 1px solid var(--border-strong);
+      border-radius: 9px;
+      color: #d5aeff;
+      background: rgba(124, 58, 237, 0.12);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+    }
+
+    h2 {
+      margin: 0 0 19px;
+      color: white;
+      font-size: clamp(1.65rem, 4vw, 2.25rem);
+      line-height: 1.15;
+      letter-spacing: -0.035em;
+    }
+
+    h3 {
+      margin: 30px 0 10px;
+      color: #f2dcff;
+      font-size: 1.08rem;
+      line-height: 1.35;
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul,
+    ol {
+      margin: 12px 0 20px;
+      padding-left: 22px;
+      color: var(--muted);
+    }
+
+    li {
+      margin: 7px 0;
+      padding-left: 4px;
+    }
+
+    li::marker {
+      color: #b26aff;
+      font-weight: 900;
+    }
+
+    strong { color: #f7ecff; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 13px;
+      margin-top: 23px;
+    }
+
+    .card {
+      min-height: 145px;
+      padding: 19px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: linear-gradient(145deg, rgba(43, 19, 73, 0.62), rgba(17, 7, 31, 0.4));
+    }
+
+    .card-kicker {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--cyan);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .card strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .card p {
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .callout {
+      margin: 22px 0;
+      padding: 18px 20px;
+      border: 1px solid rgba(85, 230, 255, 0.24);
+      border-radius: 15px;
+      color: #cceff6;
+      background: rgba(27, 89, 105, 0.11);
+    }
+
+    .callout.warning {
+      border-color: rgba(255, 173, 90, 0.34);
+      color: #f2d6b9;
+      background: rgba(120, 65, 22, 0.12);
+    }
+
+    .callout p { color: inherit; }
+
+    .placeholder {
+      display: inline-block;
+      padding: 2px 8px;
+      border: 1px dashed rgba(255, 173, 90, 0.7);
+      border-radius: 7px;
+      color: #ffd2a5;
+      background: rgba(255, 173, 90, 0.08);
+      font-weight: 800;
+    }
+
+    footer {
+      padding: 35px 0 48px;
+      border-top: 1px solid var(--border);
+      color: #8f7fa0;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    footer p { color: inherit; }
+
+    .footer-mark {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      margin-right: 8px;
+      border-radius: 50%;
+      background: var(--purple);
+      box-shadow: 0 0 12px var(--purple);
+    }
+
+    .legal-links {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; }
+      .toc ol { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .cards { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 620px) {
+      .wrap { width: min(calc(100% - 24px), var(--content)); }
+      .hero { padding-top: 55px; }
+      .logo-placeholder { width: 74px; height: 74px; border-radius: 22px; }
+      .layout { padding-top: 24px; }
+      .toc ol { grid-template-columns: 1fr; }
+      .section, .notice { border-radius: 19px; }
+      .hero-actions, .button { width: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: 0.01ms !important; }
+    }
+
+    @media print {
+      :root { --text: #17111d; --muted: #3f3547; }
+      body { color: #17111d; background: white; font-size: 11pt; }
+      body::before, .progress, .toc, .hero-actions { display: none; }
+      .hero { padding: 28px 0; border-color: #ddd; }
+      h1 { color: #28133c; background: none; -webkit-text-fill-color: initial; }
+      .layout { display: block; padding-top: 24px; }
+      .section, .notice, .card, .callout {
+        break-inside: avoid;
+        border-color: #ddd;
+        background: white;
+        box-shadow: none;
+      }
+      h2, h3, strong { color: #211529; }
+      a { color: #4f2670; }
+    }
+  </style>
 </head>
 <body>
-    <h1>Terms of Service</h1>
+  <div class="progress" aria-hidden="true"></div>
+  <a class="skip-link" href="#main-content">Skip to Terms of Service</a>
 
-    <p>
-        Gymetry is provided as-is.
-    </p>
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <!-- Replace this block with your logo, for example:
+           <img src="logo.png" width="88" height="88" alt="Gymeflix logo"> -->
+      <div class="logo-placeholder" role="img" aria-label="Gymeflix logo placeholder">Logo</div>
+      <p class="eyebrow">Gymeflix · Legal Center</p>
+      <h1>Terms of Service</h1>
+      <p class="lede">
+        The rules and responsibilities that apply when you create an account, follow a workout,
+        view advertising, or purchase the ad-free version of Gymeflix.
+      </p>
+      <div class="meta-row" aria-label="Terms information">
+        <span class="chip">Effective: 3 September 2026</span>
+        <span class="chip">Version 1.0</span>
+        <span class="chip">Android &amp; iOS</span>
+      </div>
+      <div class="hero-actions">
+        <a class="button primary" href="#agreement">Read the agreement</a>
+        <a class="button" href="index.html">Privacy Policy</a>
+      </div>
+    </div>
+  </header>
 
-    <p>
-        Users are responsible for the accuracy of information
-        entered into the application.
-    </p>
+  <div class="wrap layout">
+    <nav class="toc" aria-label="Terms of Service contents">
+      <p class="toc-title">On this page</p>
+      <ol>
+        <li><a href="#agreement">Agreement</a></li>
+        <li><a href="#eligibility">Eligibility</a></li>
+        <li><a href="#health-safety">Health &amp; safety</a></li>
+        <li><a href="#accounts">Accounts</a></li>
+        <li><a href="#license">App license</a></li>
+        <li><a href="#acceptable-use">Acceptable use</a></li>
+        <li><a href="#user-content">Your content</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="#ads">Advertising</a></li>
+        <li><a href="#purchases">Purchases</a></li>
+        <li><a href="#third-parties">Third parties</a></li>
+        <li><a href="#ownership">Ownership</a></li>
+        <li><a href="#availability">Availability</a></li>
+        <li><a href="#termination">Termination</a></li>
+        <li><a href="#disclaimers">Disclaimers</a></li>
+        <li><a href="#liability">Liability</a></li>
+        <li><a href="#disputes">Disputes</a></li>
+        <li><a href="#store-terms">App-store terms</a></li>
+        <li><a href="#general">General terms</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
 
-    <p>
-        By using Gymetry, you agree to these terms.
-    </p>
+    <main id="main-content">
+      <aside class="notice" aria-label="Plain-language summary">
+        <strong>Important</strong>
+        <p>
+          Gymeflix provides general fitness planning and tracking—not medical care. Exercise has
+          inherent risks. Use appropriate judgment, follow professional medical advice, and stop
+          immediately if an activity causes pain, dizziness, breathing difficulty, or other
+          concerning symptoms.
+        </p>
+      </aside>
+
+      <section class="section" id="agreement">
+        <span class="section-number">01</span>
+        <h2>Agreement to these Terms</h2>
+        <p>
+          These Terms of Service (“Terms”) form a legally binding agreement between you and the
+          developer and publisher identified on Gymeflix’s official app-store listing (“Gymeflix,”
+          “Gymetry,” “we,” “us,” or “our”). They govern your download, access, and use of the
+          <strong>Gymeflix</strong> fitness application, which may be identified as
+          <strong>Gymetry</strong> in technical records, and related services (collectively, the
+          “Service”).
+        </p>
+        <p>
+          By installing, creating an account for, accessing, or using the Service, you agree to
+          these Terms and our <a href="index.html">Privacy Policy</a>. If you do not agree, do not
+          use the Service. If you use the Service for an organization, you represent that you have
+          authority to bind that organization, and “you” includes that organization.
+        </p>
+        <p>
+          Additional terms imposed by Google Play, Apple’s App Store, an authentication provider,
+          or another feature provider may also apply. Mandatory consumer protections in your
+          country or region remain unaffected.
+        </p>
+        <div class="cards">
+          <article class="card">
+            <span class="card-kicker">Fitness</span>
+            <strong>Informational tools</strong>
+            <p>Plans, BMI estimates, statistics, and reminders support fitness organization and are not medical advice.</p>
+          </article>
+          <article class="card">
+            <span class="card-kicker">Account</span>
+            <strong>Your responsibility</strong>
+            <p>Keep your credentials secure and provide accurate information needed for calculations and account recovery.</p>
+          </article>
+          <article class="card">
+            <span class="card-kicker">Monetization</span>
+            <strong>Ads or ad-free</strong>
+            <p>The free Service may show ads; a one-time ad-free purchase may be offered through Google Play.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="eligibility">
+        <span class="section-number">02</span>
+        <h2>Eligibility and age</h2>
+        <p>
+          You must be legally capable of entering into this agreement. The Service is not directed
+          to children under 13. If you are under the age of legal majority where you live, you may
+          use the Service only with permission and supervision from a parent or legal guardian who
+          agrees to these Terms. If local law requires parental consent at an age above 13, that
+          higher threshold applies.
+        </p>
+        <p>
+          You may not use the Service if applicable law prohibits you from receiving it or if we
+          previously terminated your access for a serious or repeated violation, unless we give
+          written permission.
+        </p>
+      </section>
+
+      <section class="section" id="health-safety">
+        <span class="section-number">03</span>
+        <h2>Health, exercise, and safety</h2>
+        <p>
+          Gymeflix provides general fitness information, workout-planning tools, calculations,
+          reminders, and progress tracking. It does not provide medical advice, diagnosis,
+          treatment, emergency monitoring, physical therapy, or a substitute for a qualified
+          healthcare or fitness professional.
+        </p>
+        <ul>
+          <li>Consult an appropriate professional before starting or changing an exercise program, particularly if you are pregnant, injured, taking medication, have a medical condition, or have been advised to limit activity.</li>
+          <li>Choose exercises, resistance, duration, equipment, and intensity suitable for your condition, experience, and environment.</li>
+          <li>Use properly maintained equipment, safe technique, adequate space, suitable supervision, hydration, rest, and any protective equipment appropriate to the activity.</li>
+          <li>Do not exercise while distracted or in an environment where viewing or interacting with a device creates danger.</li>
+          <li>Stop exercising and seek appropriate assistance if you experience pain, faintness, chest discomfort, severe shortness of breath, or other concerning symptoms. Contact local emergency services in an emergency.</li>
+        </ul>
+        <div class="callout warning">
+          <p>
+            <strong>BMI and body-fat estimates have limitations.</strong> They may be inaccurate or
+            inappropriate for particular individuals and must not be used as the sole basis for a
+            medical, nutritional, or safety decision.
+          </p>
+        </div>
+        <p>
+          You voluntarily assume the ordinary risks inherent in physical exercise to the extent
+          permitted by law. Nothing in these Terms excludes responsibility that cannot legally be
+          excluded.
+        </p>
+      </section>
+
+      <section class="section" id="accounts">
+        <span class="section-number">04</span>
+        <h2>Accounts and account security</h2>
+        <p>
+          Some features require an account. You agree to provide information that is accurate,
+          current, and yours to provide, and to keep relevant profile and contact information up to
+          date. Fitness results may be unreliable if birthday, height, weight, gender selection, or
+          workout information is inaccurate.
+        </p>
+        <p>
+          You are responsible for safeguarding your device, password, email account, and linked
+          sign-in-provider account. Do not share authentication tokens or permit another person to
+          use your account. Notify us promptly if you reasonably suspect unauthorized access. You
+          are responsible for activity through your account unless applicable law provides otherwise.
+        </p>
+        <p>
+          If you sign in through Google, Facebook, Apple, or X, your relationship with that provider
+          is governed by its terms. We may rely on information supplied by the provider to establish
+          and secure your Gymeflix account.
+        </p>
+      </section>
+
+      <section class="section" id="license">
+        <span class="section-number">05</span>
+        <h2>Limited license to use the Service</h2>
+        <p>
+          Subject to these Terms and applicable app-store rules, we grant you a personal, limited,
+          revocable, non-exclusive, non-transferable, and non-sublicensable license to install and
+          use the App on devices you own or control for your personal, non-commercial fitness use.
+          The App is licensed, not sold.
+        </p>
+        <p>
+          This license does not transfer ownership of the App or its content. Except where law or an
+          applicable open-source license expressly permits it, you may not copy, distribute, sell,
+          lease, sublicense, publicly perform, modify, create derivative works from, decompile,
+          disassemble, or reverse engineer the Service or attempt to derive its source code.
+        </p>
+      </section>
+
+      <section class="section" id="acceptable-use">
+        <span class="section-number">06</span>
+        <h2>Acceptable use</h2>
+        <p>You agree not to:</p>
+        <ul>
+          <li>use the Service in violation of law, these Terms, or another person’s rights;</li>
+          <li>impersonate another person, create an account using information you are not authorized to use, or misrepresent your affiliation;</li>
+          <li>upload unlawful, infringing, abusive, deceptive, malicious, or privacy-invasive content;</li>
+          <li>probe, bypass, disable, or interfere with authentication, access controls, advertising, purchase verification, rate limits, or security features;</li>
+          <li>introduce malware, exploit vulnerabilities, overload infrastructure, or disrupt another user’s access;</li>
+          <li>use bots, scraping, automated extraction, or bulk requests except with our written authorization;</li>
+          <li>fraudulently obtain or retain an ad-free entitlement, manipulate purchases, or abuse refund processes;</li>
+          <li>use the Service to develop a competing dataset or service through unauthorized extraction; or</li>
+          <li>encourage or assist another person to do any of the above.</li>
+        </ul>
+        <p>
+          Restrictions on reverse engineering apply only to the extent allowed by applicable law
+          and do not override rights granted by licenses for open-source components.
+        </p>
+      </section>
+
+      <section class="section" id="user-content">
+        <span class="section-number">07</span>
+        <h2>Your information and content</h2>
+        <p>
+          You retain ownership of information and content you enter or upload, including your
+          profile image and workout records (“User Content”). You give us a worldwide,
+          non-exclusive, royalty-free license to host, store, reproduce, transmit, format, and
+          display User Content only as reasonably necessary to operate, secure, synchronize,
+          troubleshoot, and improve the Service and fulfill your requests.
+        </p>
+        <p>
+          You represent that you have the rights and permissions needed to provide User Content and
+          that our processing of it for the Service will not unlawfully infringe another person’s
+          rights. Do not upload confidential information belonging to others or an image you are not
+          entitled to use.
+        </p>
+        <p>
+          The Service may store data locally and synchronize it when network access becomes
+          available. You should maintain any independent copy you need. We cannot guarantee that
+          synchronization will always be immediate, complete, or conflict-free.
+        </p>
+      </section>
+
+      <section class="section" id="privacy">
+        <span class="section-number">08</span>
+        <h2>Privacy</h2>
+        <p>
+          Our <a href="index.html">Privacy Policy</a> explains what information the Service
+          collects, how it is used and shared, retention and deletion practices, advertising data,
+          and your privacy choices. It is incorporated into these Terms by reference. By using the
+          Service, you acknowledge those practices.
+        </p>
+        <p>
+          You can request account deletion within the App or through the external process described
+          in the Privacy Policy. Uninstalling the App does not by itself delete an online account.
+        </p>
+      </section>
+
+      <section class="section" id="ads">
+        <span class="section-number">09</span>
+        <h2>Advertising</h2>
+        <p>
+          The free Service may display banner, interstitial, contextual, personalized, or limited
+          advertising supplied by Google Mobile Ads and its authorized partners. Advertising helps
+          fund the Service. Ad selection and measurement may depend on device, network, interaction,
+          consent, and advertising-identifier information as described in the Privacy Policy.
+        </p>
+        <p>
+          We do not control every advertisement or the destination it links to, and an advertisement
+          does not mean we endorse the advertiser, offer, product, claim, or website. Use care before
+          interacting with or purchasing from an advertiser. Third-party transactions are between
+          you and that third party.
+        </p>
+        <p>
+          You must not fraudulently click ads, automate ad interactions, encourage invalid traffic,
+          or interfere with ad measurement. Available consent, device, and in-ad privacy controls
+          may affect ad personalization but may not eliminate all advertising.
+        </p>
+      </section>
+
+      <section class="section" id="purchases">
+        <span class="section-number">10</span>
+        <h2>Ad-free purchase, billing, and refunds</h2>
+        <p>
+          On supported Android versions, Gymeflix may offer a one-time, non-consumable purchase that
+          disables advertising in the App (“Ad-Free”). The price, currency, taxes, and final purchase
+          terms are displayed by Google Play before you confirm. Google Play processes payment; we
+          do not receive your full payment-card details.
+        </p>
+        <ul>
+          <li><strong>Entitlement:</strong> Ad-Free is a limited digital entitlement, not ownership of the App. It is generally tied to the Google Play account and platform used to purchase it.</li>
+          <li><strong>Restoration:</strong> restoration requires the correct store account, network availability, and a valid purchase record. It may not transfer to another platform or unrelated store account.</li>
+          <li><strong>No subscription:</strong> unless the purchase screen expressly says otherwise, the described Ad-Free product is a one-time purchase and does not automatically renew.</li>
+          <li><strong>Revocation:</strong> access may be removed if a purchase is refunded, reversed, charged back, cancelled, found fraudulent, or otherwise invalidated by the store.</li>
+          <li><strong>Feature scope:</strong> Ad-Free removes App advertising after the entitlement is recognized. It does not guarantee that all third-party branding, external content, or store messages disappear.</li>
+        </ul>
+        <p>
+          Refund eligibility and processing are governed by applicable law and the store through
+          which you purchased. For Google Play purchases, use
+          <a href="https://support.google.com/googleplay/answer/15574897" target="_blank" rel="noopener noreferrer">Google Play’s refund process</a>.
+          If an eligible purchase is not recognized, contact us with the order reference and the
+          account used for purchase—never send full card information.
+        </p>
+      </section>
+
+      <section class="section" id="third-parties">
+        <span class="section-number">11</span>
+        <h2>Third-party services and links</h2>
+        <p>
+          The Service depends on or links to third-party services, including Supabase, Google Mobile
+          Ads, Google Play Billing, app stores, and optional social sign-in providers. Their services
+          may have separate terms, privacy policies, availability limits, and eligibility rules.
+          You are responsible for complying with terms that apply to your use of them.
+        </p>
+        <p>
+          We do not control third-party networks, websites, advertisements, account systems, or
+          payment systems and are not responsible for their independent acts, content, security, or
+          availability. This does not limit any responsibility that applicable law does not allow us
+          to exclude.
+        </p>
+      </section>
+
+      <section class="section" id="ownership">
+        <span class="section-number">12</span>
+        <h2>Intellectual property and feedback</h2>
+        <p>
+          The Service—including its software, interface, visual design, text, graphics, exercise
+          organization, databases, trademarks, and other materials—is owned by us or our licensors
+          and protected by intellectual-property laws. Third-party names and marks belong to their
+          respective owners. No rights are granted except the limited license expressly stated in
+          these Terms.
+        </p>
+        <p>
+          If you voluntarily submit an idea, suggestion, or feedback about Gymeflix, you grant us a
+          perpetual, worldwide, irrevocable, transferable, sublicensable, royalty-free license to
+          use it without restriction or compensation, provided we continue to handle personal
+          information in accordance with the Privacy Policy.
+        </p>
+      </section>
+
+      <section class="section" id="availability">
+        <span class="section-number">13</span>
+        <h2>Availability, updates, and changes</h2>
+        <p>
+          We may add, remove, test, update, suspend, or discontinue features to maintain security,
+          comply with law, respond to third-party changes, or improve the Service. Features may vary
+          by device, operating system, country, language, account state, store, or network access.
+        </p>
+        <p>
+          We do not promise uninterrupted, error-free, or permanent availability. Reminders may be
+          delayed or suppressed by device settings, battery management, permissions, time-zone
+          changes, or operating-system behavior. The Service must not be your only method for a
+          safety-critical, medical, or time-critical reminder.
+        </p>
+        <p>
+          You may need to install updates to continue using the Service. Updates may be installed
+          automatically under your device or store settings and are governed by these Terms unless
+          accompanied by different terms.
+        </p>
+      </section>
+
+      <section class="section" id="termination">
+        <span class="section-number">14</span>
+        <h2>Suspension, termination, and deletion</h2>
+        <p>
+          You may stop using the Service at any time and may request account deletion as described
+          in the Privacy Policy. We may suspend or terminate access if we reasonably believe you
+          seriously or repeatedly violated these Terms, created risk or legal exposure, engaged in
+          fraud or abuse, or if suspension is required by law or a service provider.
+        </p>
+        <p>
+          Where reasonable and legally permitted, we will provide notice and an opportunity to
+          correct the issue or appeal before termination. Immediate action may be necessary to
+          protect users, infrastructure, purchases, or legal rights.
+        </p>
+        <p>
+          Upon termination, the license granted to you ends. Provisions that by their nature should
+          survive—including ownership, payment obligations, disclaimers, liability limitations,
+          dispute provisions, and general terms—will survive. Data is handled after termination as
+          described in the Privacy Policy.
+        </p>
+      </section>
+
+      <section class="section" id="disclaimers">
+        <span class="section-number">15</span>
+        <h2>Disclaimers</h2>
+        <p>
+          To the fullest extent permitted by law, the Service is provided <strong>“as is”</strong>
+          and <strong>“as available.”</strong> We disclaim implied warranties and conditions of
+          merchantability, satisfactory quality, fitness for a particular purpose, title,
+          non-infringement, accuracy, availability, and quiet enjoyment.
+        </p>
+        <p>
+          We do not warrant that calculations, exercise descriptions, routines, progress statistics,
+          synchronized records, advertisements, or reminders are complete, accurate, suitable,
+          available, or error-free; that defects will be corrected; or that the Service will meet
+          every fitness objective. Results vary between individuals and no particular health,
+          appearance, weight, strength, or performance outcome is promised.
+        </p>
+        <p>
+          Some jurisdictions do not permit certain warranty exclusions. In those jurisdictions,
+          these disclaimers apply only to the maximum extent permitted, and your non-waivable rights
+          remain in force.
+        </p>
+      </section>
+
+      <section class="section" id="liability">
+        <span class="section-number">16</span>
+        <h2>Limitation of liability</h2>
+        <p>
+          To the fullest extent permitted by law, Gymeflix and its developer, affiliates, licensors,
+          and service providers will not be liable for indirect, incidental, special, exemplary,
+          punitive, or consequential damages; loss of data, opportunity, profits, or goodwill; or
+          damages arising from your reliance on fitness estimates, inability to access the Service,
+          third-party conduct, or unauthorized account access.
+        </p>
+        <p>
+          To the fullest extent permitted by law, our aggregate liability arising from or relating
+          to the Service or these Terms will not exceed the greater of: (a) the amount you paid us
+          through the applicable app store for the Service during the twelve months before the event
+          giving rise to the claim, or (b) US$25 or its local-currency equivalent.
+        </p>
+        <p>
+          These limitations do not exclude or limit liability for fraud, fraudulent misrepresentation,
+          willful misconduct, gross negligence, death or personal injury caused by negligence, or
+          any liability or consumer remedy that cannot lawfully be excluded or limited. They apply
+          only to the extent permitted in your jurisdiction.
+        </p>
+      </section>
+
+      <section class="section" id="disputes">
+        <span class="section-number">17</span>
+        <h2>Questions, complaints, and disputes</h2>
+        <p>
+          Please contact us first and describe the issue so we can try to resolve it informally. Do
+          not include passwords or full payment-card details. Nothing in this section prevents
+          either party from seeking urgent relief where necessary or using a consumer-protection or
+          dispute-resolution process that cannot lawfully be waived.
+        </p>
+        <p>
+          Except where mandatory law provides otherwise, these Terms are governed by the laws
+          applicable at the publisher’s principal place of business, without regard to conflict-of-law
+          principles. Courts with lawful jurisdiction over the publisher and the dispute may hear
+          claims. Consumers retain any right to bring a claim in their home jurisdiction or receive
+          protections under the mandatory laws of their residence.
+        </p>
+      </section>
+
+      <section class="section" id="store-terms">
+        <span class="section-number">18</span>
+        <h2>App-store supplemental terms</h2>
+        <h3>Apple App Store</h3>
+        <p>
+          If you obtained the App through Apple’s App Store, you acknowledge that these Terms are
+          between you and us, not Apple. Apple is not responsible for the App or its content and has
+          no obligation to provide maintenance or support except as required by law. If the App
+          fails to conform to an applicable warranty, you may notify Apple, and Apple may refund the
+          purchase price, if any, as provided by its rules. Apple is not responsible for other
+          claims relating to the App. Apple and its subsidiaries are third-party beneficiaries of
+          these Terms and may enforce the applicable provisions. Your use must comply with the
+          <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer">Apple Standard EULA and Usage Rules</a>.
+        </p>
+
+        <h3>Google Play</h3>
+        <p>
+          If you obtained the App through Google Play, Google is not a party to these Terms and is
+          not responsible for the App, support, or claims relating to it except as stated in
+          Google’s own terms or required by law. Your store use and purchases are also subject to
+          the <a href="https://play.google.com/intl/en_us/about/play-terms/" target="_blank" rel="noopener noreferrer">Google Play Terms of Service</a>.
+        </p>
+      </section>
+
+      <section class="section" id="general">
+        <span class="section-number">19</span>
+        <h2>General terms</h2>
+        <ul>
+          <li><strong>Changes to these Terms:</strong> we may update them for legal, security, technical, or service changes. We will revise the effective date and provide additional notice when appropriate. If you do not accept updated Terms, stop using the Service.</li>
+          <li><strong>Entire agreement:</strong> these Terms, the Privacy Policy, applicable purchase disclosures, and any feature-specific terms form the agreement regarding the Service.</li>
+          <li><strong>Severability:</strong> if a provision is unenforceable, it will be enforced to the maximum lawful extent or modified narrowly, and the remaining provisions continue.</li>
+          <li><strong>No waiver:</strong> failure to enforce a provision is not a waiver of the right to enforce it later.</li>
+          <li><strong>Assignment:</strong> you may not assign these Terms without our consent. We may assign them as part of a merger, reorganization, financing, acquisition, or transfer of the Service, subject to applicable law.</li>
+          <li><strong>Force majeure:</strong> neither party is responsible for delay caused by events reasonably beyond its control, except for obligations that cannot legally be excused.</li>
+          <li><strong>Headings:</strong> headings are for convenience and do not limit the meaning of these Terms.</li>
+          <li><strong>Electronic communications:</strong> where legally permitted, notices may be provided through the App, app-store listing, this website, or the email associated with your account.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="contact">
+        <span class="section-number">20</span>
+        <h2>Contact us</h2>
+        <p>
+          For support, purchase issues, legal questions, or questions about these Terms, contact the
+          Gymeflix publisher:
+        </p>
+        <p>
+          <strong>App:</strong> Gymeflix (Gymetry)<br>
+          <strong>Developer / publisher:</strong> Gymeflix publisher<br>
+          <strong>Support email:</strong>
+          <span class="placeholder">ADD YOUR SUPPORT EMAIL BEFORE PUBLISHING</span><br>
+          <strong>Project:</strong>
+          <a href="https://github.com/NsubugaIbrahim/Gymetry" target="_blank" rel="noopener noreferrer">github.com/NsubugaIbrahim/Gymetry</a>
+        </p>
+        <div class="callout warning">
+          <p>
+            <strong>Publisher action required:</strong> replace the support-email placeholder with a
+            monitored address and confirm that the publisher identity above matches your app-store
+            listing before treating these Terms as final.
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <p><span class="footer-mark" aria-hidden="true">&#8203;</span>Gymeflix Legal Center · Terms version 1.0</p>
+      <div class="legal-links">
+        <a href="index.html">Privacy Policy</a>
+        <a href="terms.html" aria-current="page">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const progress = document.querySelector('.progress');
+      const links = [...document.querySelectorAll('.toc a')];
+      const sections = links
+        .map(link => document.querySelector(link.getAttribute('href')))
+        .filter(Boolean);
+
+      const updateProgress = () => {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        const value = max > 0 ? Math.min(100, Math.max(0, (window.scrollY / max) * 100)) : 0;
+        progress.style.width = `${value}%`;
+      };
+
+      const observer = new IntersectionObserver(entries => {
+        const visible = entries
+          .filter(entry => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (!visible) return;
+        links.forEach(link => {
+          const active = link.getAttribute('href') === `#${visible.target.id}`;
+          link.classList.toggle('active', active);
+          if (active) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+        });
+      }, { rootMargin: '-15% 0px -72% 0px', threshold: [0, 0.1, 0.5] });
+
+      sections.forEach(section => observer.observe(section));
+      updateProgress();
+      addEventListener('scroll', updateProgress, { passive: true });
+      addEventListener('resize', updateProgress);
+    })();
+  </script>
 </body>
 </html>
