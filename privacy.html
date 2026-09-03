@@ -1,22 +1,1385 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Gymeflix Privacy Policy</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10051f">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Privacy Policy for the Gymeflix fitness and workout application.">
+  <title>Privacy Policy | Gymeflix</title>
+  <style>
+    :root {
+      --bg: #08040f;
+      --bg-soft: #110720;
+      --panel: rgba(27, 12, 49, 0.76);
+      --panel-solid: #190d2b;
+      --text: #f7f1ff;
+      --muted: #c8b7d9;
+      --purple: #a855f7;
+      --violet: #7c3aed;
+      --pink: #ec4899;
+      --cyan: #55e6ff;
+      --orange: #ffad5a;
+      --border: rgba(196, 141, 255, 0.2);
+      --border-strong: rgba(196, 141, 255, 0.42);
+      --shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
+      --radius: 24px;
+      --content: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 32px;
+    }
+
+    body {
+      margin: 0;
+      min-width: 300px;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 8% 4%, rgba(124, 58, 237, 0.25), transparent 31rem),
+        radial-gradient(circle at 92% 18%, rgba(236, 72, 153, 0.13), transparent 26rem),
+        linear-gradient(145deg, #07030d 0%, #10051f 50%, #07030e 100%);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.72;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      opacity: 0.18;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(168, 85, 247, 0.14) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(168, 85, 247, 0.14) 1px, transparent 1px);
+      background-size: 52px 52px;
+      mask-image: linear-gradient(to bottom, black, transparent 76%);
+    }
+
+    a {
+      color: #c999ff;
+      text-underline-offset: 4px;
+      text-decoration-thickness: 1px;
+    }
+
+    a:hover,
+    a:focus-visible {
+      color: var(--cyan);
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--cyan);
+      outline-offset: 4px;
+      border-radius: 6px;
+    }
+
+    .progress {
+      position: fixed;
+      inset: 0 auto auto 0;
+      z-index: 20;
+      width: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--violet), var(--pink), var(--cyan));
+      box-shadow: 0 0 18px rgba(85, 230, 255, 0.75);
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 50;
+      padding: 10px 16px;
+      color: #12051f;
+      background: var(--cyan);
+      border-radius: 999px;
+      font-weight: 800;
+      transform: translateY(-150%);
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .wrap {
+      width: min(calc(100% - 36px), var(--content));
+      margin-inline: auto;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 76px 0 48px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: -14rem;
+      left: 50%;
+      width: 36rem;
+      height: 36rem;
+      border: 1px solid rgba(196, 141, 255, 0.18);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 4rem rgba(124, 58, 237, 0.025),
+        0 0 0 8rem rgba(124, 58, 237, 0.02);
+      transform: translateX(-50%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      justify-items: center;
+      text-align: center;
+    }
+
+    .logo-placeholder {
+      display: grid;
+      width: 88px;
+      height: 88px;
+      place-items: center;
+      margin-bottom: 24px;
+      border: 1px solid var(--border-strong);
+      border-radius: 26px;
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0)),
+        rgba(19, 7, 34, 0.9);
+      box-shadow:
+        inset 0 0 24px rgba(168, 85, 247, 0.15),
+        0 0 32px rgba(124, 58, 237, 0.24);
+      color: #d9b9ff;
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 15px;
+      color: #d9c2f2;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 14px var(--cyan);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.8rem, 8vw, 5.8rem);
+      line-height: 0.98;
+      letter-spacing: -0.065em;
+      background: linear-gradient(100deg, #ffffff 10%, #d7afff 55%, #79ebff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .lede {
+      max-width: 720px;
+      margin: 25px auto 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.2vw, 1.18rem);
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .chip {
+      padding: 8px 13px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: #dbcce9;
+      background: rgba(20, 8, 35, 0.66);
+      font-size: 13px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 10px 18px;
+      border: 1px solid var(--border-strong);
+      border-radius: 14px;
+      color: var(--text);
+      background: rgba(31, 13, 54, 0.7);
+      font-weight: 800;
+      text-decoration: none;
+      transition: border-color 160ms ease, transform 160ms ease, background 160ms ease;
+    }
+
+    .button.primary {
+      border-color: transparent;
+      color: white;
+      background: linear-gradient(110deg, #7133db, #b83cc3);
+      box-shadow: 0 12px 30px rgba(124, 58, 237, 0.26);
+    }
+
+    .button:hover {
+      color: white;
+      border-color: rgba(85, 230, 255, 0.56);
+      background-color: rgba(44, 21, 72, 0.9);
+      transform: translateY(-2px);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 255px minmax(0, 1fr);
+      gap: 34px;
+      padding: 44px 0 70px;
+      align-items: start;
+    }
+
+    .toc {
+      position: sticky;
+      top: 24px;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: rgba(17, 7, 31, 0.78);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .toc-title {
+      margin: 0 0 12px;
+      color: white;
+      font-size: 13px;
+      font-weight: 850;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .toc ol {
+      display: grid;
+      gap: 3px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: item;
+    }
+
+    .toc li {
+      counter-increment: item;
+    }
+
+    .toc a {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 7px;
+      padding: 6px 4px;
+      border-radius: 8px;
+      color: #baa9ca;
+      font-size: 13px;
+      line-height: 1.35;
+      text-decoration: none;
+    }
+
+    .toc a::before {
+      content: counter(item, decimal-leading-zero);
+      color: #8659ab;
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: 0.04em;
+      padding-top: 2px;
+    }
+
+    .toc a:hover,
+    .toc a.active {
+      color: white;
+      background: rgba(168, 85, 247, 0.11);
+    }
+
+    main {
+      min-width: 0;
+    }
+
+    .notice,
+    .section {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .notice {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 20px;
+      padding: 26px;
+    }
+
+    .notice::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: linear-gradient(var(--purple), var(--cyan));
+    }
+
+    .notice strong {
+      display: block;
+      margin-bottom: 4px;
+      color: white;
+      font-size: 1.05rem;
+    }
+
+    .notice p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .section {
+      margin-bottom: 20px;
+      padding: clamp(25px, 5vw, 42px);
+    }
+
+    .section-number {
+      display: inline-grid;
+      min-width: 36px;
+      height: 28px;
+      place-items: center;
+      margin-bottom: 15px;
+      border: 1px solid var(--border-strong);
+      border-radius: 9px;
+      color: #d5aeff;
+      background: rgba(124, 58, 237, 0.12);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+    }
+
+    h2 {
+      margin: 0 0 19px;
+      color: white;
+      font-size: clamp(1.65rem, 4vw, 2.25rem);
+      line-height: 1.15;
+      letter-spacing: -0.035em;
+    }
+
+    h3 {
+      margin: 30px 0 10px;
+      color: #f2dcff;
+      font-size: 1.08rem;
+      line-height: 1.35;
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul,
+    ol {
+      margin: 12px 0 20px;
+      padding-left: 22px;
+      color: var(--muted);
+    }
+
+    li {
+      margin: 7px 0;
+      padding-left: 4px;
+    }
+
+    li::marker {
+      color: #b26aff;
+      font-weight: 900;
+    }
+
+    strong {
+      color: #f7ecff;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 13px;
+      margin-top: 23px;
+    }
+
+    .card {
+      min-height: 148px;
+      padding: 19px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: linear-gradient(145deg, rgba(43, 19, 73, 0.62), rgba(17, 7, 31, 0.4));
+    }
+
+    .card-kicker {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--cyan);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .card strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .card p {
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 22px 0;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    table {
+      width: 100%;
+      min-width: 680px;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    th,
+    td {
+      padding: 16px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid rgba(196, 141, 255, 0.13);
+    }
+
+    th {
+      color: #ead7ff;
+      background: rgba(124, 58, 237, 0.12);
+      font-size: 11px;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    td {
+      color: var(--muted);
+    }
+
+    tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    tbody tr:hover {
+      background: rgba(168, 85, 247, 0.045);
+    }
+
+    .callout {
+      margin: 22px 0;
+      padding: 18px 20px;
+      border: 1px solid rgba(85, 230, 255, 0.24);
+      border-radius: 15px;
+      color: #cceff6;
+      background: rgba(27, 89, 105, 0.11);
+    }
+
+    .callout.warning {
+      border-color: rgba(255, 173, 90, 0.34);
+      color: #f2d6b9;
+      background: rgba(120, 65, 22, 0.12);
+    }
+
+    .callout p {
+      color: inherit;
+    }
+
+    .provider-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .provider {
+      padding: 17px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: rgba(13, 5, 24, 0.4);
+    }
+
+    .provider strong,
+    .provider span {
+      display: block;
+    }
+
+    .provider span {
+      margin: 4px 0 7px;
+      color: #aa98ba;
+      font-size: 13px;
+    }
+
+    .provider a {
+      font-size: 13px;
+      font-weight: 750;
+    }
+
+    .deletion-box {
+      padding: clamp(22px, 4vw, 30px);
+      border: 1px solid rgba(236, 72, 153, 0.38);
+      border-radius: 20px;
+      background:
+        radial-gradient(circle at 100% 0, rgba(236, 72, 153, 0.13), transparent 18rem),
+        rgba(28, 8, 38, 0.7);
+    }
+
+    .steps {
+      counter-reset: step;
+      display: grid;
+      gap: 12px;
+      margin: 20px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .steps li {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 12px;
+      align-items: start;
+      margin: 0;
+      padding: 0;
+    }
+
+    .steps li::before {
+      content: counter(step);
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border: 1px solid rgba(236, 72, 153, 0.42);
+      border-radius: 11px;
+      color: white;
+      background: rgba(236, 72, 153, 0.13);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .placeholder {
+      display: inline-block;
+      padding: 2px 8px;
+      border: 1px dashed rgba(255, 173, 90, 0.7);
+      border-radius: 7px;
+      color: #ffd2a5;
+      background: rgba(255, 173, 90, 0.08);
+      font-weight: 800;
+    }
+
+    footer {
+      padding: 35px 0 48px;
+      border-top: 1px solid var(--border);
+      color: #8f7fa0;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    footer p {
+      color: inherit;
+    }
+
+    .footer-mark {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      margin-right: 8px;
+      border-radius: 50%;
+      background: var(--purple);
+      box-shadow: 0 0 12px var(--purple);
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .toc {
+        position: static;
+      }
+
+      .toc ol {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .wrap {
+        width: min(calc(100% - 24px), var(--content));
+      }
+
+      .hero {
+        padding-top: 55px;
+      }
+
+      .logo-placeholder {
+        width: 74px;
+        height: 74px;
+        border-radius: 22px;
+      }
+
+      .layout {
+        padding-top: 24px;
+      }
+
+      .toc ol,
+      .provider-list {
+        grid-template-columns: 1fr;
+      }
+
+      .section,
+      .notice {
+        border-radius: 19px;
+      }
+
+      .hero-actions,
+      .button {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    @media print {
+      :root {
+        --text: #17111d;
+        --muted: #3f3547;
+      }
+
+      body {
+        color: #17111d;
+        background: white;
+        font-size: 11pt;
+      }
+
+      body::before,
+      .progress,
+      .toc,
+      .hero-actions {
+        display: none;
+      }
+
+      .hero {
+        padding: 28px 0;
+        border-color: #ddd;
+      }
+
+      h1 {
+        color: #28133c;
+        background: none;
+        -webkit-text-fill-color: initial;
+      }
+
+      .layout {
+        display: block;
+        padding-top: 24px;
+      }
+
+      .section,
+      .notice,
+      .card,
+      .provider,
+      .deletion-box {
+        break-inside: avoid;
+        border-color: #ddd;
+        background: white;
+        box-shadow: none;
+      }
+
+      h2,
+      h3,
+      strong {
+        color: #211529;
+      }
+
+      a {
+        color: #4f2670;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Privacy Policy</h1>
+  <div class="progress" aria-hidden="true"></div>
+  <a class="skip-link" href="#main-content">Skip to privacy policy</a>
 
-    <p>
-        Gymeflix collects account information and fitness-related
-        data necessary to provide its services.
-    </p>
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <!-- Replace this block with your logo, for example:
+           <img src="logo.png" width="88" height="88" alt="Gymeflix logo"> -->
+      <div class="logo-placeholder" role="img" aria-label="Gymeflix logo placeholder">Logo</div>
+      <p class="eyebrow">Gymeflix · Privacy Center</p>
+      <h1>Privacy Policy</h1>
+      <p class="lede">
+        A clear account of the information Gymeflix uses to power workout planning,
+        fitness progress, account sync, reminders, advertising, and optional purchases.
+      </p>
+      <div class="meta-row" aria-label="Policy information">
+        <span class="chip">Effective: 3 September 2026</span>
+        <span class="chip">Version 1.0</span>
+        <span class="chip">Android &amp; iOS</span>
+      </div>
+      <div class="hero-actions">
+        <a class="button primary" href="#deletion">Delete account or data</a>
+        <a class="button" href="#contact">Privacy contact</a>
+      </div>
+    </div>
+  </header>
 
-    <p>
-        Data may be stored using Supabase and other service providers.
-    </p>
+  <div class="wrap layout">
+    <nav class="toc" aria-label="Privacy policy contents">
+      <p class="toc-title">On this page</p>
+      <ol>
+        <li><a href="#scope">Scope</a></li>
+        <li><a href="#data">Data we handle</a></li>
+        <li><a href="#collection">How we collect it</a></li>
+        <li><a href="#use">How we use it</a></li>
+        <li><a href="#ads">Advertising</a></li>
+        <li><a href="#sharing">Sharing</a></li>
+        <li><a href="#permissions">Permissions</a></li>
+        <li><a href="#retention">Retention</a></li>
+        <li><a href="#deletion">Deletion</a></li>
+        <li><a href="#choices">Your choices</a></li>
+        <li><a href="#rights">Privacy rights</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#international">International data</a></li>
+        <li><a href="#children">Children</a></li>
+        <li><a href="#health">Fitness information</a></li>
+        <li><a href="#website">This website</a></li>
+        <li><a href="#changes">Policy changes</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
 
-    <p>
-        Contact: ibrahimnazel942@gmail.com
-    </p>
+    <main id="main-content">
+      <aside class="notice" aria-label="Plain-language summary">
+        <strong>The short version</strong>
+        <p>
+          Gymeflix stores the fitness information you enter, can sync it to a Supabase-backed
+          account, uses Google Mobile Ads to display ads, and uses Google Play Billing for the
+          optional ad-free purchase on Android. We do not sell your personal or sensitive
+          fitness data for money, and we do not intentionally send your profile, BMI, or workout
+          records to advertisers.
+        </p>
+      </aside>
+
+      <section class="section" id="scope">
+        <span class="section-number">01</span>
+        <h2>Scope and who we are</h2>
+        <p>
+          This Privacy Policy applies to the <strong>Gymeflix</strong> fitness and workout
+          application, which may also be identified as <strong>Gymetry</strong> in package names,
+          source code, links, or technical records (together, the “App”). “Gymeflix,” “we,” “us,”
+          and “our” refer to the developer and publisher identified on the App’s official store
+          listing.
+        </p>
+        <p>
+          This policy covers the Android and iOS versions of the App, the account and sync
+          services used by the App, and this privacy-policy website. It does not govern a
+          third-party service’s independent processing under its own privacy policy.
+        </p>
+        <div class="cards">
+          <article class="card">
+            <span class="card-kicker">Core service</span>
+            <strong>Fitness data you control</strong>
+            <p>Your profile, measurements, routines, completed sets, sessions, and progress records.</p>
+          </article>
+          <article class="card">
+            <span class="card-kicker">Cloud sync</span>
+            <strong>Optional account storage</strong>
+            <p>Supabase provides authentication, database sync, password recovery, and profile-image storage.</p>
+          </article>
+          <article class="card">
+            <span class="card-kicker">Monetization</span>
+            <strong>Ads or ad-free</strong>
+            <p>Google serves ads; eligible Android users can make a one-time Google Play purchase to remove them.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="data">
+        <span class="section-number">02</span>
+        <h2>Information we handle</h2>
+        <p>
+          The information handled depends on the features you use. Some information remains on
+          your device; if you sign in and sync, relevant records are also transmitted to our
+          Supabase backend.
+        </p>
+
+        <div class="table-wrap" role="region" aria-label="Data categories table" tabindex="0">
+          <table>
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Examples</th>
+                <th>Why it is used</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Account and authentication</strong></td>
+                <td>Email address, password submitted to Supabase, account ID, access and refresh tokens, sign-in provider, and password-recovery information.</td>
+                <td>Create and secure your account, keep you signed in, recover access, and associate synced records with you.</td>
+              </tr>
+              <tr>
+                <td><strong>Profile information</strong></td>
+                <td>Username, full name, birthday, gender selection, profile image, fitness program, program start date, and provider-supplied name or avatar if you use social sign-in.</td>
+                <td>Build your profile, personalize calculations and workout plans, and restore your profile on another device.</td>
+              </tr>
+              <tr>
+                <td><strong>Body and fitness information</strong></td>
+                <td>Height, current and goal weight, age, BMI values, estimated body-fat percentage, BMI category, and measurement dates.</td>
+                <td>Calculate and display fitness indicators, trends, and progress. These are fitness estimates, not medical diagnoses.</td>
+              </tr>
+              <tr>
+                <td><strong>Workout and routine activity</strong></td>
+                <td>Training category, split style, frequency, schedule, session order, exercise names, sets, reps, weights, distance units, durations, completed sessions, skipped-session dates, and progress percentages.</td>
+                <td>Plan routines, record workouts, calculate statistics, schedule reminders, and sync or restore progress.</td>
+              </tr>
+              <tr>
+                <td><strong>Profile images</strong></td>
+                <td>A photo you select or an avatar received from a sign-in provider. The App may compress and cache a copy.</td>
+                <td>Display your chosen profile picture and, when sync is enabled, make it available across your devices.</td>
+              </tr>
+              <tr>
+                <td><strong>Purchase information</strong></td>
+                <td>Product ID, purchase status, purchase token, acknowledgement state, and entitlement status. Google handles your payment method.</td>
+                <td>Process, verify, acknowledge, and restore the optional ad-free purchase.</td>
+              </tr>
+              <tr>
+                <td><strong>Advertising and device data</strong></td>
+                <td>IP address, approximate location inferred from IP, ad or app-set identifiers, device/account identifiers, App interactions, ad interactions, and diagnostic or performance information.</td>
+                <td>Serve and measure ads, prevent fraud and abuse, perform analytics, and maintain ad-service performance.</td>
+              </tr>
+              <tr>
+                <td><strong>Settings and local technical data</strong></td>
+                <td>Language, unit preferences, reminder schedules, notification choices, ad-free status, cached images, sync queue state, and authentication tokens.</td>
+                <td>Remember your choices, provide offline functionality, deliver local reminders, and retry synchronization.</td>
+              </tr>
+              <tr>
+                <td><strong>Communications</strong></td>
+                <td>Your email address and the content of a support, privacy, or deletion request.</td>
+                <td>Respond to you, verify requests, resolve problems, and maintain necessary records of the request.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout">
+          <p>
+            <strong>What the App does not request:</strong> the current App does not request precise
+            GPS location, contacts, call logs, SMS, microphone access, or camera access, and it does
+            not import records from Health Connect or Apple Health. Selecting a profile image uses
+            the platform’s media-selection interface.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="collection">
+        <span class="section-number">03</span>
+        <h2>How information is collected</h2>
+        <h3>Information you provide</h3>
+        <p>
+          We receive information when you register, complete your profile, enter measurements,
+          build a training program, log a workout, select a profile image, change settings, make a
+          purchase, or contact us.
+        </p>
+
+        <h3>Information from a sign-in provider</h3>
+        <p>
+          If you choose Google, Facebook, Apple, or X sign-in, the provider and Supabase may give
+          the App an account identifier and information you authorized, such as your email address,
+          display name, or profile image. The exact information depends on the provider and your
+          settings with that provider. We do not receive your third-party account password.
+        </p>
+
+        <h3>Information collected automatically</h3>
+        <p>
+          The Google Mobile Ads SDK automatically processes certain device, network, interaction,
+          diagnostic, and advertising-identifier data when ads are requested or displayed. Our
+          Supabase service also receives ordinary network and security information, including IP
+          addresses and request logs, when the App connects to it.
+        </p>
+
+        <h3>On-device generation</h3>
+        <p>
+          The App calculates BMI-related values, progress metrics, routine compliance, training
+          efficiency, and other workout statistics from the information you enter. These derived
+          values may be stored locally and synced with your account.
+        </p>
+      </section>
+
+      <section class="section" id="use">
+        <span class="section-number">04</span>
+        <h2>How and why we use information</h2>
+        <p>We use information to:</p>
+        <ul>
+          <li>create, authenticate, maintain, and recover your account;</li>
+          <li>create fitness plans and present your workout schedule;</li>
+          <li>save workout history, measurements, goals, and progress;</li>
+          <li>calculate fitness indicators and generate progress statistics;</li>
+          <li>synchronize and restore your data across supported devices;</li>
+          <li>display your profile and selected profile image;</li>
+          <li>schedule local workout reminders and restore them after a restart or app update;</li>
+          <li>display, measure, and protect advertising;</li>
+          <li>process and restore the optional ad-free purchase;</li>
+          <li>detect abuse, secure accounts, debug failures, and maintain reliability;</li>
+          <li>respond to support, privacy, and account-deletion requests; and</li>
+          <li>comply with law and enforce our legal rights.</li>
+        </ul>
+
+        <h3>Legal bases for users in the EEA, UK, and similar jurisdictions</h3>
+        <p>
+          Where a legal basis is required, we rely on: <strong>contract</strong> to provide features
+          you request; <strong>consent</strong> for optional processing where required, including
+          personalized advertising; <strong>legitimate interests</strong> in securing, maintaining,
+          and improving the App, provided those interests do not override your rights; and
+          <strong>legal obligations</strong> when processing is required by law. You can withdraw
+          consent at any time, without affecting earlier lawful processing.
+        </p>
+      </section>
+
+      <section class="section" id="ads">
+        <span class="section-number">05</span>
+        <h2>Advertising and identifiers</h2>
+        <p>
+          The free version of Gymeflix uses <strong>Google AdMob / Google Mobile Ads</strong> for
+          banner and interstitial advertising. Google states that its Mobile Ads SDK may
+          automatically collect and share IP address, user product interactions, diagnostic
+          information, Android advertising ID, app-set ID, and other device or account identifiers
+          for advertising, analytics, and fraud-prevention purposes.
+        </p>
+        <p>
+          Ads may be personalized where permitted by law and your consent or device settings. Even
+          when personalization is unavailable or disabled, contextual or limited ads may still use
+          information such as the App, approximate location inferred from IP, and the content area
+          in which an ad appears.
+        </p>
+        <div class="callout">
+          <p>
+            <strong>Separation of fitness and ad data:</strong> we do not intentionally pass your
+            name, email address, birthday, profile photo, body measurements, BMI records, workout
+            history, or fitness goals to Google as ad-targeting parameters.
+          </p>
+        </div>
+        <p>
+          You can reset or delete the Android advertising ID in your device’s privacy settings,
+          limit tracking through iOS settings where available, use Google’s in-ad privacy controls,
+          or purchase the ad-free option where offered. Removing ads stops future ad requests from
+          the App after the entitlement is recognized, but does not automatically delete data
+          previously processed by Google.
+        </p>
+        <p>
+          Depending on local law, Google’s processing for interest-based advertising may be treated
+          as “sharing” or “targeted advertising.” We do not sell personal or sensitive fitness data
+          for monetary consideration.
+        </p>
+      </section>
+
+      <section class="section" id="sharing">
+        <span class="section-number">06</span>
+        <h2>When information is shared</h2>
+        <p>
+          We disclose information only as described below, at your direction, or when legally
+          required. Each provider may process information under its own privacy terms.
+        </p>
+
+        <div class="provider-list">
+          <article class="provider">
+            <strong>Supabase</strong>
+            <span>Authentication, database hosting, synchronization, profile-image storage, and infrastructure security.</span>
+            <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">Supabase Privacy Policy ↗</a>
+          </article>
+          <article class="provider">
+            <strong>Google Mobile Ads / AdMob</strong>
+            <span>Ad delivery, measurement, analytics, diagnostics, and fraud prevention.</span>
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy ↗</a>
+          </article>
+          <article class="provider">
+            <strong>Google Play Billing</strong>
+            <span>Payment processing, purchase confirmation, acknowledgement, and restoration on Android.</span>
+            <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldt=privacynotice" target="_blank" rel="noopener noreferrer">Google Payments Privacy Notice ↗</a>
+          </article>
+          <article class="provider">
+            <strong>Social sign-in providers</strong>
+            <span>Authentication when you choose Google, Facebook, Apple, or X. Your use is also governed by the selected provider.</span>
+            <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple</a>
+            · <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer">Meta</a>
+            · <a href="https://x.com/en/privacy" target="_blank" rel="noopener noreferrer">X</a>
+          </article>
+          <article class="provider">
+            <strong>GitHub Pages</strong>
+            <span>Hosting this public policy page. GitHub logs visitor IP addresses for security.</span>
+            <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub Privacy Statement ↗</a>
+          </article>
+          <article class="provider">
+            <strong>Authorities and transactions</strong>
+            <span>Information may be disclosed when required by valid law, to protect rights and safety, or as part of a merger, financing, acquisition, or asset transfer with appropriate safeguards.</span>
+          </article>
+        </div>
+
+        <p style="margin-top: 22px;">
+          We may also use contractors who support the App and are bound to process information only
+          for authorized purposes and with appropriate confidentiality and security obligations.
+          We may disclose aggregated or de-identified information that cannot reasonably identify you.
+        </p>
+      </section>
+
+      <section class="section" id="permissions">
+        <span class="section-number">07</span>
+        <h2>Device permissions and platform access</h2>
+        <div class="table-wrap" role="region" aria-label="App permissions table" tabindex="0">
+          <table>
+            <thead>
+              <tr>
+                <th>Access</th>
+                <th>Purpose</th>
+                <th>Your control</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Internet and network</strong></td>
+                <td>Account access, Supabase sync, profile images, ads, and billing.</td>
+                <td>Core online features will not work without a connection.</td>
+              </tr>
+              <tr>
+                <td><strong>Notifications</strong></td>
+                <td>Show workout-day and pre-workout reminders.</td>
+                <td>You can deny or revoke notification permission in device settings.</td>
+              </tr>
+              <tr>
+                <td><strong>Exact alarms / reminders</strong></td>
+                <td>Deliver locally scheduled reminders at the intended time.</td>
+                <td>You can manage alarms and reminders in Android system settings.</td>
+              </tr>
+              <tr>
+                <td><strong>Start-up events</strong></td>
+                <td>Reschedule your local reminders after reboot or an App update.</td>
+                <td>Disabling reminders or the App stops this use.</td>
+              </tr>
+              <tr>
+                <td><strong>Billing</strong></td>
+                <td>Offer and restore the optional ad-free Google Play purchase.</td>
+                <td>A purchase occurs only after you initiate and confirm it through Google Play.</td>
+              </tr>
+              <tr>
+                <td><strong>Advertising identifier</strong></td>
+                <td>Ad delivery, measurement, analytics, and fraud prevention through Google Mobile Ads.</td>
+                <td>You can reset or delete it in Android privacy settings and use available consent controls.</td>
+              </tr>
+              <tr>
+                <td><strong>Selected photos</strong></td>
+                <td>Use a picture you deliberately select as your profile image.</td>
+                <td>The App receives only the item you choose through the system picker.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section" id="retention">
+        <span class="section-number">08</span>
+        <h2>Data retention</h2>
+        <p>We use the following retention principles:</p>
+        <ul>
+          <li><strong>On-device records</strong> remain until you delete them, use the account-deletion control, clear App data, or uninstall the App. Copies may remain in device backups controlled by your operating-system or backup provider.</li>
+          <li><strong>Account and synced fitness records</strong> are generally kept while your account is active and until deletion is requested or the data is no longer needed to provide the App.</li>
+          <li><strong>Profile images</strong> stored for account sync are kept while needed for your profile and are removed when the corresponding deletion request is completed, subject to backup limitations.</li>
+          <li><strong>Authentication and security records</strong> may be retained for a limited period where reasonably necessary to secure the service, investigate abuse, resolve disputes, or comply with law.</li>
+          <li><strong>Purchase records</strong> are retained by Google under its policies. We may retain entitlement and transaction-reference information needed to honor purchases, prevent fraud, and meet legal obligations.</li>
+          <li><strong>Advertising data</strong> is retained by Google and its authorized partners under their own policies and the consent choices that apply.</li>
+          <li><strong>Deletion and support communications</strong> may be retained long enough to complete your request, document compliance, prevent fraud, and resolve disputes.</li>
+        </ul>
+        <p>
+          Deleted information may remain temporarily in restricted backups or logs until routine
+          deletion cycles complete. We will not use retained backup data for ordinary product or
+          advertising purposes and will delete or isolate it as required by applicable law.
+        </p>
+      </section>
+
+      <section class="section" id="deletion">
+        <span class="section-number">09</span>
+        <h2>Delete your account or data</h2>
+        <div class="deletion-box">
+          <h3 style="margin-top: 0;">In the App</h3>
+          <ol class="steps">
+            <li><span>Open Gymeflix and sign in to the account you want to delete.</span></li>
+            <li><span>Open your profile or account screen and select <strong>Delete Account</strong>.</span></li>
+            <li><span>Review the warning and confirm deletion. The App will remove local records and initiate removal of associated synced App data.</span></li>
+          </ol>
+
+          <h3>From the web or if you cannot access the App</h3>
+          <p>
+            Send an email to the privacy address in <a href="#contact">Contact us</a> with the
+            subject <strong>Gymeflix Account Deletion Request</strong>. Include the email address
+            associated with the account and enough information for us to verify ownership.
+            <strong>Never send your password or full payment-card details.</strong>
+          </p>
+          <a class="button primary" href="#contact">Go to deletion contact</a>
+
+          <h3>What happens next</h3>
+          <p>
+            After verification, we will delete or de-identify the Gymeflix authentication account,
+            profile, stored profile image, synced workouts, routines, body measurements, BMI
+            records, and other account-linked App data, unless specific information must be retained
+            for security, fraud prevention, transaction records, dispute resolution, or another
+            legal obligation. We will explain any applicable exception. Deleting Gymeflix does not
+            delete your separate Google, Facebook, Apple, X, or app-store account.
+          </p>
+          <p>
+            Uninstalling the App alone removes ordinary local App data but does not automatically
+            delete an online account or data already synced to the service. Use one of the deletion
+            methods above for online deletion.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="choices">
+        <span class="section-number">10</span>
+        <h2>Your privacy choices</h2>
+        <ul>
+          <li><strong>Profile and fitness data:</strong> review or update available information in the profile and fitness screens.</li>
+          <li><strong>Cloud sync:</strong> do not sign in or provide account information if you do not want to use online account features. Network-dependent features may then be unavailable.</li>
+          <li><strong>Profile image:</strong> do not select an image, replace it in your profile, or request deletion.</li>
+          <li><strong>Notifications:</strong> deny permission, disable reminders in the App where available, or turn them off in system settings.</li>
+          <li><strong>Advertising:</strong> use device advertising controls, Google’s ad controls, and any consent or privacy-options message made available to you.</li>
+          <li><strong>Ad-free purchase:</strong> purchase the optional product where available to stop ads in the App after the entitlement is confirmed.</li>
+          <li><strong>Social sign-in:</strong> revoke Gymeflix access through the selected provider’s account settings. Revocation does not by itself delete your Gymeflix account.</li>
+          <li><strong>Account deletion:</strong> use the methods described in the deletion section.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="rights">
+        <span class="section-number">11</span>
+        <h2>Your privacy rights</h2>
+        <p>
+          Depending on where you live, you may have rights to request access to, correction of,
+          deletion of, or a portable copy of your personal information; restrict or object to
+          certain processing; withdraw consent; opt out of targeted advertising or certain forms
+          of sharing; and appeal a refusal of a request. You may also have the right to complain to
+          your local data-protection authority.
+        </p>
+        <p>
+          Submit a request using the privacy contact below. We may ask for reasonable information
+          to verify your identity and protect the account. Authorized agents may submit requests
+          where local law permits, subject to verification of their authority. We will respond
+          within the period required by applicable law and will not discriminate against you for
+          exercising a privacy right.
+        </p>
+      </section>
+
+      <section class="section" id="security">
+        <span class="section-number">12</span>
+        <h2>How we protect information</h2>
+        <p>
+          We use reasonable technical and organizational safeguards appropriate to the nature of
+          the information. These include encrypted HTTPS connections for backend requests, private
+          App storage for local authentication tokens and databases, authenticated requests for
+          account-linked sync, access controls on backend data, and data-minimization practices.
+          Profile-image uploads are sent using encrypted connections.
+        </p>
+        <p>
+          No device, transmission, or storage system is completely secure. You are responsible for
+          protecting your device, email account, sign-in-provider account, and password. Contact us
+          promptly if you believe your Gymeflix account has been compromised.
+        </p>
+      </section>
+
+      <section class="section" id="international">
+        <span class="section-number">13</span>
+        <h2>International processing</h2>
+        <p>
+          Gymeflix and its service providers may process information in countries other than the
+          country where you live. Those countries may have different data-protection laws. Where
+          required, we rely on appropriate safeguards for international transfers, such as adequacy
+          decisions, contractual protections, or other lawful transfer mechanisms. Supabase,
+          Google, social sign-in providers, and GitHub describe their own international processing
+          practices in the policies linked above.
+        </p>
+      </section>
+
+      <section class="section" id="children">
+        <span class="section-number">14</span>
+        <h2>Children’s privacy</h2>
+        <p>
+          Gymeflix is a general-audience fitness App and is not directed to children under 13. We
+          do not knowingly collect personal information from a child under 13. Where local law sets
+          a higher age for valid consent, a user below that age should use account features only
+          with authorization from a parent or guardian.
+        </p>
+        <p>
+          If you believe a child provided personal information without the required permission,
+          contact us. We will investigate and delete the information when legally required. If the
+          App is later offered specifically to children, this policy and the App’s data practices
+          will be updated before that offering.
+        </p>
+      </section>
+
+      <section class="section" id="health">
+        <span class="section-number">15</span>
+        <h2>Fitness information is not medical advice</h2>
+        <p>
+          Height, weight, BMI, estimated body-fat percentage, workout performance, and related
+          information can be sensitive. Gymeflix uses these details to provide user-requested
+          fitness features and does not intentionally disclose them to advertisers for ad targeting.
+          The App does not currently connect to Health Connect, Apple Health, healthcare providers,
+          insurers, or employers.
+        </p>
+        <p>
+          App calculations are estimates for general fitness and informational purposes. They are
+          not medical records, diagnoses, or treatment advice. Consult a qualified professional for
+          medical concerns and before beginning a program when appropriate.
+        </p>
+      </section>
+
+      <section class="section" id="website">
+        <span class="section-number">16</span>
+        <h2>This privacy-policy website</h2>
+        <p>
+          This page is a static GitHub Pages site. It does not include advertising, analytics,
+          third-party fonts, tracking pixels, or a contact form, and its local script only controls
+          visual reading progress and navigation highlighting. GitHub states that it logs a
+          visitor’s IP address for security whenever a GitHub Pages site is visited. GitHub handles
+          that information under its own Privacy Statement.
+        </p>
+        <p>
+          Following an external link takes you to a third-party site. Its privacy practices and
+          cookies are controlled by that third party, not by this page.
+        </p>
+      </section>
+
+      <section class="section" id="changes">
+        <span class="section-number">17</span>
+        <h2>Changes to this policy</h2>
+        <p>
+          We may update this policy when the App, service providers, legal requirements, or data
+          practices change. The effective date and version at the top will be revised. If a change
+          is material, we will provide additional notice where appropriate, such as an in-App
+          message, store-listing notice, or account communication. Your privacy choices and rights
+          continue to apply to information processed under the updated policy.
+        </p>
+      </section>
+
+      <section class="section" id="contact">
+        <span class="section-number">18</span>
+        <h2>Contact us</h2>
+        <p>
+          For privacy questions, rights requests, or account and data deletion, contact the Gymeflix
+          publisher using the following details:
+        </p>
+        <p>
+          <strong>App:</strong> Gymeflix<br>
+          <strong>Developer / publisher:</strong>Nsubuga Ibrahim (devGato)<br>
+          <strong>Privacy email:</strong>
+          <span class="placeholder">ibrahimnazel942@gmail.com</span><br>
+          <strong>Project:</strong>
+          <a href="https://github.com/NsubugaIbrahim/Gymetry" target="_blank" rel="noopener noreferrer">github.com/NsubugaIbrahim/Gymetry</a>
+        </p>
+        <div class="callout warning">
+          <p>
+            <strong>Publisher action required:</strong> replace the privacy-email placeholder above
+            with a monitored email address before submitting this URL to Google Play or publishing
+            it as the final policy. A working contact is necessary for privacy and external account-deletion requests.
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <p><span class="footer-mark" aria-hidden="true">&#8203;</span>Gymeflix Privacy Center · Policy version 1.0</p>
+      <p>Designed as a static, tracker-free page for GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const progress = document.querySelector('.progress');
+      const links = [...document.querySelectorAll('.toc a')];
+      const sections = links
+        .map(link => document.querySelector(link.getAttribute('href')))
+        .filter(Boolean);
+
+      const updateProgress = () => {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        const value = max > 0 ? Math.min(100, Math.max(0, (window.scrollY / max) * 100)) : 0;
+        progress.style.width = `${value}%`;
+      };
+
+      const observer = new IntersectionObserver(entries => {
+        const visible = entries
+          .filter(entry => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (!visible) return;
+        links.forEach(link => {
+          const active = link.getAttribute('href') === `#${visible.target.id}`;
+          link.classList.toggle('active', active);
+          if (active) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+        });
+      }, { rootMargin: '-15% 0px -72% 0px', threshold: [0, 0.1, 0.5] });
+
+      sections.forEach(section => observer.observe(section));
+      updateProgress();
+      addEventListener('scroll', updateProgress, { passive: true });
+      addEventListener('resize', updateProgress);
+    })();
+  </script>
 </body>
 </html>
