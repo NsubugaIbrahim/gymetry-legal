@@ -1,1 +1,497 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10051f">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Support information for Gymeflix, including account, privacy, purchase, and app help.">
+  <title>Support | Gymeflix</title>
+  <style>
+    :root {
+      --bg: #08040f;
+      --panel: rgba(27, 12, 49, 0.76);
+      --text: #f7f1ff;
+      --muted: #c8b7d9;
+      --purple: #a855f7;
+      --violet: #7c3aed;
+      --pink: #ec4899;
+      --cyan: #55e6ff;
+      --orange: #ffad5a;
+      --border: rgba(196, 141, 255, 0.2);
+      --border-strong: rgba(196, 141, 255, 0.42);
+      --shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
+      --radius: 24px;
+      --content: 1180px;
+    }
 
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 32px;
+    }
+
+    body {
+      margin: 0;
+      min-width: 300px;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 8% 4%, rgba(124, 58, 237, 0.25), transparent 31rem),
+        radial-gradient(circle at 92% 18%, rgba(236, 72, 153, 0.13), transparent 26rem),
+        radial-gradient(circle at 50% 105%, rgba(85, 230, 255, 0.08), transparent 30rem),
+        linear-gradient(145deg, #07030d 0%, #10051f 50%, #07030e 100%);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.72;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      opacity: 0.18;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(168, 85, 247, 0.14) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(168, 85, 247, 0.14) 1px, transparent 1px);
+      background-size: 52px 52px;
+      mask-image: linear-gradient(to bottom, black, transparent 76%);
+    }
+
+    a {
+      color: #c999ff;
+      text-underline-offset: 4px;
+      text-decoration-thickness: 1px;
+    }
+
+    a:hover,
+    a:focus-visible { color: var(--cyan); }
+
+    :focus-visible {
+      outline: 3px solid var(--cyan);
+      outline-offset: 4px;
+      border-radius: 6px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 50;
+      padding: 10px 16px;
+      color: #12051f;
+      background: var(--cyan);
+      border-radius: 999px;
+      font-weight: 800;
+      transform: translateY(-150%);
+    }
+
+    .skip-link:focus { transform: translateY(0); }
+
+    .wrap {
+      width: min(calc(100% - 36px), var(--content));
+      margin-inline: auto;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 76px 0 48px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: -14rem;
+      left: 50%;
+      width: 36rem;
+      height: 36rem;
+      border: 1px solid rgba(196, 141, 255, 0.18);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 4rem rgba(124, 58, 237, 0.025),
+        0 0 0 8rem rgba(124, 58, 237, 0.02);
+      transform: translateX(-50%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      justify-items: center;
+      text-align: center;
+    }
+
+    .logo-placeholder {
+      display: grid;
+      width: 88px;
+      height: 88px;
+      place-items: center;
+      margin-bottom: 24px;
+      border: 1px solid var(--border-strong);
+      border-radius: 26px;
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0)),
+        rgba(19, 7, 34, 0.9);
+      box-shadow:
+        inset 0 0 24px rgba(168, 85, 247, 0.15),
+        0 0 32px rgba(124, 58, 237, 0.24);
+      color: #d9b9ff;
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 15px;
+      color: #d9c2f2;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 14px var(--cyan);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.8rem, 8vw, 5.8rem);
+      line-height: 0.98;
+      letter-spacing: -0.065em;
+      background: linear-gradient(100deg, #ffffff 10%, #d7afff 55%, #79ebff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .lede {
+      max-width: 760px;
+      margin: 25px auto 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.2vw, 1.18rem);
+    }
+
+    .meta-row,
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .chip {
+      padding: 8px 13px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: #dbcce9;
+      background: rgba(20, 8, 35, 0.66);
+      font-size: 13px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 10px 18px;
+      border: 1px solid var(--border-strong);
+      border-radius: 14px;
+      color: var(--text);
+      background: rgba(31, 13, 54, 0.7);
+      font-weight: 800;
+      text-decoration: none;
+      transition: border-color 160ms ease, transform 160ms ease, background 160ms ease;
+    }
+
+    .button.primary {
+      border-color: transparent;
+      color: white;
+      background: linear-gradient(110deg, #7133db, #b83cc3);
+      box-shadow: 0 12px 30px rgba(124, 58, 237, 0.26);
+    }
+
+    .button:hover {
+      color: white;
+      border-color: rgba(85, 230, 255, 0.56);
+      background-color: rgba(44, 21, 72, 0.9);
+      transform: translateY(-2px);
+    }
+
+    main {
+      padding: 44px 0 70px;
+    }
+
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .section {
+      position: relative;
+      overflow: hidden;
+      min-width: 0;
+      padding: clamp(25px, 5vw, 38px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .section.featured {
+      grid-column: 1 / -1;
+      background:
+        radial-gradient(circle at 100% 0, rgba(85, 230, 255, 0.1), transparent 18rem),
+        var(--panel);
+    }
+
+    .section::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: linear-gradient(var(--purple), var(--cyan));
+    }
+
+    .section-number {
+      display: inline-grid;
+      min-width: 36px;
+      height: 28px;
+      place-items: center;
+      margin-bottom: 15px;
+      border: 1px solid var(--border-strong);
+      border-radius: 9px;
+      color: #d5aeff;
+      background: rgba(124, 58, 237, 0.12);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      color: white;
+      font-size: clamp(1.55rem, 4vw, 2.1rem);
+      line-height: 1.15;
+      letter-spacing: -0.035em;
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      margin: 12px 0 20px;
+      padding-left: 22px;
+      color: var(--muted);
+    }
+
+    li { margin: 8px 0; }
+
+    strong { color: #f2dcff; }
+
+    .contact-card {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-top: 18px;
+    }
+
+    .email-pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 46px;
+      padding: 10px 16px;
+      border: 1px solid rgba(85, 230, 255, 0.32);
+      border-radius: 999px;
+      color: #9cefff;
+      background: rgba(85, 230, 255, 0.07);
+      font-weight: 800;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      padding: 26px 0 38px;
+      border-top: 1px solid var(--border);
+      color: #8f7fa0;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .footer-mark {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      margin-right: 8px;
+      border-radius: 50%;
+      background: var(--purple);
+      box-shadow: 0 0 12px var(--purple);
+    }
+
+    @media (max-width: 820px) {
+      .support-grid { grid-template-columns: 1fr; }
+      .section.featured { grid-column: auto; }
+    }
+
+    @media (max-width: 620px) {
+      .wrap { width: min(calc(100% - 24px), var(--content)); }
+      .hero { padding-top: 46px; }
+      .logo-placeholder {
+        width: 74px;
+        height: 74px;
+        border-radius: 22px;
+      }
+      .button,
+      .email-pill {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to support information</a>
+
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <div class="logo-placeholder" role="img" aria-label="Gymeflix logo placeholder">Logo</div>
+      <p class="eyebrow">Gymeflix · Support</p>
+      <h1>Need help?<br>Start here.</h1>
+      <p class="lede">
+        Get help with your account, privacy requests, purchases, advertising settings, and app
+        questions. Include enough detail for us to identify the issue and respond faster.
+      </p>
+      <div class="meta-row" aria-label="Support details">
+        <span class="chip">Last updated: 20 September 2026</span>
+        <span class="chip">Support contact: email</span>
+      </div>
+      <div class="hero-actions">
+        <a class="button primary" href="mailto:ibrahimnazel942@gmail.com?subject=Gymeflix%20Support%20Request">Email support</a>
+        <a class="button" href="index.html">Legal center</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="wrap">
+    <div class="support-grid">
+      <section class="section featured" id="contact">
+        <span class="section-number">01</span>
+        <h2>Contact support</h2>
+        <p>
+          For help with Gymeflix, send an email to the support address below. We aim to respond as
+          soon as reasonably possible.
+        </p>
+        <div class="contact-card">
+          <a class="email-pill" href="mailto:ibrahimnazel942@gmail.com?subject=Gymeflix%20Support%20Request">ibrahimnazel942@gmail.com</a>
+          <a class="button" href="mailto:ibrahimnazel942@gmail.com?subject=Gymeflix%20Account%20Deletion%20Request">Account deletion request</a>
+        </div>
+      </section>
+
+      <section class="section" id="include">
+        <span class="section-number">02</span>
+        <h2>What to include</h2>
+        <p>
+          Please do not send passwords. For account or purchase issues, include:
+        </p>
+        <ul>
+          <li>the email address used for your Gymeflix account;</li>
+          <li>your device type and operating-system version;</li>
+          <li>a short description of what happened and when;</li>
+          <li>screenshots, if they help explain the issue;</li>
+          <li>for purchase issues, the store order reference if available.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="account">
+        <span class="section-number">03</span>
+        <h2>Account deletion and privacy</h2>
+        <p>
+          You can delete your account in the app when signed in. If you cannot access the app, email
+          us with the subject <strong>Gymeflix Account Deletion Request</strong> and include the email
+          address linked to the account.
+        </p>
+        <p>
+          For privacy details, including data use, retention, and your rights, read the
+          <a href="privacy.html">Privacy Policy</a>.
+        </p>
+      </section>
+
+      <section class="section" id="purchases">
+        <span class="section-number">04</span>
+        <h2>Purchases, ads, and billing</h2>
+        <p>
+          If an ad-free purchase or store transaction is not recognized, contact us with your store
+          order reference. Refunds and billing adjustments may also require Apple App Store or Google
+          Play support, depending on where the purchase was made.
+        </p>
+        <p>
+          If you are using the free version, device-level advertising controls and in-app privacy
+          choices may affect the ads shown to you.
+        </p>
+      </section>
+
+      <section class="section" id="legal">
+        <span class="section-number">05</span>
+        <h2>Legal links</h2>
+        <p>
+          These pages explain how Gymeflix handles information and the terms that apply when you use
+          the app.
+        </p>
+        <div class="contact-card">
+          <a class="button" href="privacy.html">Privacy Policy</a>
+          <a class="button" href="terms.html">Terms of Service</a>
+          <a class="button" href="index.html">Legal Center</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p><span class="footer-mark" aria-hidden="true">&#8203;</span>Gymeflix Support</p>
+      <nav class="footer-links" aria-label="Footer links">
+        <a href="index.html">Legal Center</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="mailto:ibrahimnazel942@gmail.com">Email support</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
