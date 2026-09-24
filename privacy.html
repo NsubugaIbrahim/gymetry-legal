@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#10051f">
   <meta name="color-scheme" content="dark">
-  <meta name="description" content="Privacy Policy for the Gymeflix fitness and workout application.">
-  
-  <title>Privacy Policy | Gymeflix</title>
+  <meta name="description" content="Privacy Policy for the Gymestix fitness and workout application.">
+  <title>Privacy Policy | Gymestix</title>
   <style>
     :root {
       --bg: #08040f;
@@ -631,6 +630,13 @@
       box-shadow: 0 0 12px var(--purple);
     }
 
+    .legal-links {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin-top: 10px;
+    }
+
     @media (max-width: 900px) {
       .layout {
         grid-template-columns: 1fr;
@@ -760,13 +766,11 @@
 
   <header class="hero">
     <div class="wrap hero-inner">
-      <!-- Replace this block with your logo, for example:
-           <img src="logo.png" width="88" height="88" alt="Gymeflix logo"> -->
-      <div class="logo-placeholder" role="img" aria-label="Gymeflix logo placeholder">Logo</div>
-      <p class="eyebrow">Gymeflix · Privacy Center</p>
+      <img src="icon.png" width="88" height="88" alt="Gymestix app icon" style="border-radius:26px;display:block;">
+      <p class="eyebrow">Gymestix · Privacy Center</p>
       <h1>Privacy Policy</h1>
       <p class="lede">
-        A clear account of the information Gymeflix uses to power workout planning,
+        A clear account of the information Gymestix uses to power workout planning,
         fitness progress, account sync, reminders, advertising, and optional purchases.
       </p>
       <div class="meta-row" aria-label="Policy information">
@@ -810,11 +814,7 @@
       <aside class="notice" aria-label="Plain-language summary">
         <strong>The short version</strong>
         <p>
-          Gymeflix stores the fitness information you enter, can sync it to a Supabase-backed
-          account, uses Google Mobile Ads to display ads, and uses Google Play Billing for the
-          optional ad-free purchase on Android. We do not sell your personal or sensitive
-          fitness data for money, and we do not intentionally send your profile, BMI, or workout
-          records to advertisers.
+          Gymestix stores the fitness information you enter and can back it up to your account in the cloud. We use Google’s ad service to display ads in the free version and Apple or Google’s payment systems for the optional ad-free purchase. We do not sell your personal or fitness data for money, and we do not share your profile, body measurements, or workout history with advertisers.
         </p>
       </aside>
 
@@ -822,11 +822,9 @@
         <span class="section-number">01</span>
         <h2>Scope and who we are</h2>
         <p>
-          This Privacy Policy applies to the <strong>Gymeflix</strong> fitness and workout
-          application, which may also be identified as <strong>Gymetry</strong> in package names,
-          source code, links, or technical records (together, the “App”). “Gymeflix,” “we,” “us,”
-          and “our” refer to the developer and publisher identified on the App’s official store
-          listing.
+          This Privacy Policy applies to the <strong>Gymestix</strong> fitness and workout
+          application (the “App”). “Gymestix,” “we,” “us,” and “our” refer to the
+          developer and publisher identified on the App’s official store listing.
         </p>
         <p>
           This policy covers the Android and iOS versions of the App, the account and sync
@@ -841,13 +839,13 @@
           </article>
           <article class="card">
             <span class="card-kicker">Cloud sync</span>
-            <strong>Optional account storage</strong>
-            <p>Supabase provides authentication, database sync, password recovery, and profile-image storage.</p>
+            <strong>Account-backed storage</strong>
+            <p>Your account data is securely backed up to the cloud, giving you access across devices and the ability to recover your account.</p>
           </article>
           <article class="card">
             <span class="card-kicker">Monetization</span>
             <strong>Ads or ad-free</strong>
-            <p>Google serves ads; eligible Android users can make a one-time Google Play purchase to remove them.</p>
+            <p>Google serves ads in the free version; a one-time in-app purchase is available on iOS and Android to remove them.</p>
           </article>
         </div>
       </section>
@@ -857,8 +855,8 @@
         <h2>Information we handle</h2>
         <p>
           The information handled depends on the features you use. Some information remains on
-          your device; if you sign in and sync, relevant records are also transmitted to our
-          Supabase backend.
+          your device; because the current App requires an account, relevant records are also
+          sent to our cloud servers for account access and backup.
         </p>
 
         <div class="table-wrap" role="region" aria-label="Data categories table" tabindex="0">
@@ -873,8 +871,8 @@
             <tbody>
               <tr>
                 <td><strong>Account and authentication</strong></td>
-                <td>Email address, password submitted to Supabase, account ID, access and refresh tokens, sign-in provider, and password-recovery information.</td>
-                <td>Create and secure your account, keep you signed in, recover access, and associate synced records with you.</td>
+                <td>Email address, password, account ID, sign-in method, and password-recovery information.</td>
+                <td>Create and secure your account, keep you signed in, and recover access when needed.</td>
               </tr>
               <tr>
                 <td><strong>Profile information</strong></td>
@@ -889,17 +887,17 @@
               <tr>
                 <td><strong>Workout and routine activity</strong></td>
                 <td>Training category, split style, frequency, schedule, session order, exercise names, sets, reps, weights, distance units, durations, completed sessions, skipped-session dates, and progress percentages.</td>
-                <td>Plan routines, record workouts, calculate statistics, schedule reminders, and sync or restore progress.</td>
+                <td>Plan routines, record workouts, calculate statistics, schedule reminders, and back up your progress.</td>
               </tr>
               <tr>
                 <td><strong>Profile images</strong></td>
                 <td>A photo you select or an avatar received from a sign-in provider. The App may compress and cache a copy.</td>
-                <td>Display your chosen profile picture and, when sync is enabled, make it available across your devices.</td>
+                <td>Display your chosen profile picture and make it available across your devices.</td>
               </tr>
               <tr>
                 <td><strong>Purchase information</strong></td>
-                <td>Product ID, purchase status, purchase token, acknowledgement state, and entitlement status. Google handles your payment method.</td>
-                <td>Process, verify, acknowledge, and restore the optional ad-free purchase.</td>
+                <td>Purchase status and confirmation record. Google or Apple handle your payment details.</td>
+                <td>Confirm and restore the optional ad-free purchase.</td>
               </tr>
               <tr>
                 <td><strong>Advertising and device data</strong></td>
@@ -908,8 +906,8 @@
               </tr>
               <tr>
                 <td><strong>Settings and local technical data</strong></td>
-                <td>Language, unit preferences, reminder schedules, notification choices, ad-free status, cached images, sync queue state, and authentication tokens.</td>
-                <td>Remember your choices, provide offline functionality, deliver local reminders, and retry synchronization.</td>
+                <td>Language, unit preferences, reminder schedules, notification choices, ad-free status, and cached images.</td>
+                <td>Remember your choices, keep the app working without a connection, and deliver reminders.</td>
               </tr>
               <tr>
                 <td><strong>Communications</strong></td>
@@ -942,25 +940,18 @@
 
         <h3>Information from a sign-in provider</h3>
         <p>
-          If you choose Google, Facebook, Apple, or X sign-in, the provider and Supabase may give
-          the App an account identifier and information you authorized, such as your email address,
-          display name, or profile image. The exact information depends on the provider and your
-          settings with that provider. We do not receive your third-party account password.
+          If you choose Google, Apple, or X sign-in, that service passes the App a basic account identifier and the information you’ve authorized, such as your email address, display name, or profile image. The exact information depends on the provider and your settings with them. We never receive your sign-in password from those services.
         </p>
 
         <h3>Information collected automatically</h3>
         <p>
-          The Google Mobile Ads SDK automatically processes certain device, network, interaction,
-          diagnostic, and advertising-identifier data when ads are requested or displayed. Our
-          Supabase service also receives ordinary network and security information, including IP
-          addresses and request logs, when the App connects to it.
+          Google’s ad service automatically collects certain device and network information when ads are displayed. Our cloud service also receives standard connection information, such as your IP address, when the App communicates with it.
         </p>
 
         <h3>On-device generation</h3>
         <p>
           The App calculates BMI-related values, progress metrics, routine compliance, training
-          efficiency, and other workout statistics from the information you enter. These derived
-          values may be stored locally and synced with your account.
+          efficiency, and other workout statistics from the information you enter. These calculated values are saved on your device and backed up to your account.
         </p>
       </section>
 
@@ -973,12 +964,12 @@
           <li>create fitness plans and present your workout schedule;</li>
           <li>save workout history, measurements, goals, and progress;</li>
           <li>calculate fitness indicators and generate progress statistics;</li>
-          <li>synchronize and restore your data across supported devices;</li>
+          <li>back up and restore your data across your devices;</li>
           <li>display your profile and selected profile image;</li>
           <li>schedule local workout reminders and restore them after a restart or app update;</li>
           <li>display, measure, and protect advertising;</li>
           <li>process and restore the optional ad-free purchase;</li>
-          <li>detect abuse, secure accounts, debug failures, and maintain reliability;</li>
+          <li>detect abuse, secure accounts, troubleshoot issues, and maintain reliability;</li>
           <li>respond to support, privacy, and account-deletion requests; and</li>
           <li>comply with law and enforce our legal rights.</li>
         </ul>
@@ -998,11 +989,7 @@
         <span class="section-number">05</span>
         <h2>Advertising and identifiers</h2>
         <p>
-          The free version of Gymeflix uses <strong>Google AdMob / Google Mobile Ads</strong> for
-          banner and interstitial advertising. Google states that its Mobile Ads SDK may
-          automatically collect and share IP address, user product interactions, diagnostic
-          information, Android advertising ID, app-set ID, and other device or account identifiers
-          for advertising, analytics, and fraud-prevention purposes.
+          The free version of Gymestix shows ads provided by Google. Google may automatically collect information such as your IP address, how you interact with ads, your approximate location, and advertising identifiers on your device. This information is used for ad delivery, measurement, and fraud prevention.
         </p>
         <p>
           Ads may be personalized where permitted by law and your consent or device settings. Even
@@ -1019,10 +1006,10 @@
         </div>
         <p>
           You can reset or delete the Android advertising ID in your device’s privacy settings,
-          limit tracking through iOS settings where available, use Google’s in-ad privacy controls,
+          deny or revoke tracking permission in iOS settings, use the App’s advertising privacy
+          choices where shown, use Google’s in-ad privacy controls,
           or purchase the ad-free option where offered. Removing ads stops future ad requests from
-          the App after the entitlement is recognized, but does not automatically delete data
-          previously processed by Google.
+          the App once the purchase is confirmed, but it does not erase data previously collected by Google’s ad service.
         </p>
         <p>
           Depending on local law, Google’s processing for interest-based advertising may be treated
@@ -1041,31 +1028,34 @@
 
         <div class="provider-list">
           <article class="provider">
-            <strong>Supabase</strong>
-            <span>Authentication, database hosting, synchronization, profile-image storage, and infrastructure security.</span>
-            <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">Supabase Privacy Policy ↗</a>
+            <strong>Cloud storage provider</strong>
+            <span>Securely stores your account data, workout records, and profile picture in the cloud so you can access them across devices.</span>
           </article>
           <article class="provider">
-            <strong>Google Mobile Ads / AdMob</strong>
-            <span>Ad delivery, measurement, analytics, diagnostics, and fraud prevention.</span>
+            <strong>Google Ads</strong>
+            <span>Delivers ads in the free version, measures their performance, and prevents fraud.</span>
             <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy ↗</a>
           </article>
           <article class="provider">
             <strong>Google Play Billing</strong>
-            <span>Payment processing, purchase confirmation, acknowledgement, and restoration on Android.</span>
+            <span>Payment processing, purchase confirmation, and restoration on Android.</span>
             <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldt=privacynotice" target="_blank" rel="noopener noreferrer">Google Payments Privacy Notice ↗</a>
           </article>
           <article class="provider">
+            <strong>Apple App Store</strong>
+            <span>Payment processing, purchase confirmation, and restoration on iOS.</span>
+            <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy ↗</a>
+          </article>
+          <article class="provider">
             <strong>Social sign-in providers</strong>
-            <span>Authentication when you choose Google, Facebook, Apple, or X. Your use is also governed by the selected provider.</span>
+            <span>Authentication when you choose Google, Apple, or X. Your use is also governed by the selected provider.</span>
             <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple</a>
-            · <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer">Meta</a>
+            · <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google</a>
             · <a href="https://x.com/en/privacy" target="_blank" rel="noopener noreferrer">X</a>
           </article>
           <article class="provider">
-            <strong>GitHub Pages</strong>
-            <span>Hosting this public policy page. GitHub logs visitor IP addresses for security.</span>
-            <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub Privacy Statement ↗</a>
+            <strong>Website hosting</strong>
+            <span>This policy page is hosted by GitHub Pages. GitHub may log visitor IP addresses for security purposes.</span>
           </article>
           <article class="provider">
             <strong>Authorities and transactions</strong>
@@ -1095,7 +1085,7 @@
             <tbody>
               <tr>
                 <td><strong>Internet and network</strong></td>
-                <td>Account access, Supabase sync, profile images, ads, and billing.</td>
+                <td>Account access, cloud backup, profile images, ads, and purchases.</td>
                 <td>Core online features will not work without a connection.</td>
               </tr>
               <tr>
@@ -1106,7 +1096,7 @@
               <tr>
                 <td><strong>Exact alarms / reminders</strong></td>
                 <td>Deliver locally scheduled reminders at the intended time.</td>
-                <td>You can manage alarms and reminders in Android system settings.</td>
+                <td>You can manage alarms and reminders in Android settings; iOS uses local notification scheduling.</td>
               </tr>
               <tr>
                 <td><strong>Start-up events</strong></td>
@@ -1115,13 +1105,13 @@
               </tr>
               <tr>
                 <td><strong>Billing</strong></td>
-                <td>Offer and restore the optional ad-free Google Play purchase.</td>
-                <td>A purchase occurs only after you initiate and confirm it through Google Play.</td>
+                <td>Offer and restore the optional ad-free App Store or Google Play purchase.</td>
+                <td>A purchase occurs only after you initiate and confirm it through your platform’s store.</td>
               </tr>
               <tr>
                 <td><strong>Advertising identifier</strong></td>
                 <td>Ad delivery, measurement, analytics, and fraud prevention through Google Mobile Ads.</td>
-                <td>You can reset or delete it in Android privacy settings and use available consent controls.</td>
+                <td>You can use Android advertising controls, iOS Tracking settings, and available consent controls.</td>
               </tr>
               <tr>
                 <td><strong>Selected photos</strong></td>
@@ -1139,10 +1129,10 @@
         <p>We use the following retention principles:</p>
         <ul>
           <li><strong>On-device records</strong> remain until you delete them, use the account-deletion control, clear App data, or uninstall the App. Copies may remain in device backups controlled by your operating-system or backup provider.</li>
-          <li><strong>Account and synced fitness records</strong> are generally kept while your account is active and until deletion is requested or the data is no longer needed to provide the App.</li>
-          <li><strong>Profile images</strong> stored for account sync are kept while needed for your profile and are removed when the corresponding deletion request is completed, subject to backup limitations.</li>
+          <li><strong>Account and fitness records</strong> are kept while your account is active and until you request deletion or we no longer need them to provide the service.</li>
+          <li><strong>Profile images</strong> are kept while needed for your profile and are removed when your deletion request is completed.</li>
           <li><strong>Authentication and security records</strong> may be retained for a limited period where reasonably necessary to secure the service, investigate abuse, resolve disputes, or comply with law.</li>
-          <li><strong>Purchase records</strong> are retained by Google under its policies. We may retain entitlement and transaction-reference information needed to honor purchases, prevent fraud, and meet legal obligations.</li>
+          <li><strong>Purchase records</strong> are retained by Apple or Google under their own policies. We keep a record of your purchase confirmation to honor it, prevent fraud, and meet legal obligations.</li>
           <li><strong>Advertising data</strong> is retained by Google and its authorized partners under their own policies and the consent choices that apply.</li>
           <li><strong>Deletion and support communications</strong> may be retained long enough to complete your request, document compliance, prevent fraud, and resolve disputes.</li>
         </ul>
@@ -1159,15 +1149,15 @@
         <div class="deletion-box">
           <h3 style="margin-top: 0;">In the App</h3>
           <ol class="steps">
-            <li><span>Open Gymeflix and sign in to the account you want to delete.</span></li>
+            <li><span>Open Gymestix and sign in to the account you want to delete.</span></li>
             <li><span>Open your profile or account screen and select <strong>Delete Account</strong>.</span></li>
-            <li><span>Review the warning and confirm deletion. The App will remove local records and initiate removal of associated synced App data.</span></li>
+            <li><span>Review the warning and confirm. The App will delete your local records and remove your data from the cloud.</span></li>
           </ol>
 
           <h3>From the web or if you cannot access the App</h3>
           <p>
             Send an email to the privacy address in <a href="#contact">Contact us</a> with the
-            subject <strong>Gymeflix Account Deletion Request</strong>. Include the email address
+            subject <strong>Gymestix Account Deletion Request</strong>. Include the email address
             associated with the account and enough information for us to verify ownership.
             <strong>Never send your password or full payment-card details.</strong>
           </p>
@@ -1175,17 +1165,11 @@
 
           <h3>What happens next</h3>
           <p>
-            After verification, we will delete or de-identify the Gymeflix authentication account,
-            profile, stored profile image, synced workouts, routines, body measurements, BMI
-            records, and other account-linked App data, unless specific information must be retained
-            for security, fraud prevention, transaction records, dispute resolution, or another
-            legal obligation. We will explain any applicable exception. Deleting Gymeflix does not
-            delete your separate Google, Facebook, Apple, X, or app-store account.
+            After verification, we will delete your Gymestix account, profile, profile picture, workouts, routines, body measurements, BMI records, and all other linked data, unless we are required to keep specific information for security, fraud prevention, legal obligations, or dispute resolution. We will explain any applicable exception. Deleting Gymestix does not
+            delete your separate Google, Apple, X, or app-store account.
           </p>
           <p>
-            Uninstalling the App alone removes ordinary local App data but does not automatically
-            delete an online account or data already synced to the service. Use one of the deletion
-            methods above for online deletion.
+            Uninstalling the App removes data stored on your device but does not delete your account or any data already backed up to the cloud. Use one of the deletion methods above to fully remove your account.
           </p>
         </div>
       </section>
@@ -1195,12 +1179,12 @@
         <h2>Your privacy choices</h2>
         <ul>
           <li><strong>Profile and fitness data:</strong> review or update available information in the profile and fitness screens.</li>
-          <li><strong>Cloud sync:</strong> do not sign in or provide account information if you do not want to use online account features. Network-dependent features may then be unavailable.</li>
+          <li><strong>Account:</strong> an account is required to use Gymestix. If you no longer want your data stored, you can delete your account at any time.</li>
           <li><strong>Profile image:</strong> do not select an image, replace it in your profile, or request deletion.</li>
           <li><strong>Notifications:</strong> deny permission, disable reminders in the App where available, or turn them off in system settings.</li>
           <li><strong>Advertising:</strong> use device advertising controls, Google’s ad controls, and any consent or privacy-options message made available to you.</li>
-          <li><strong>Ad-free purchase:</strong> purchase the optional product where available to stop ads in the App after the entitlement is confirmed.</li>
-          <li><strong>Social sign-in:</strong> revoke Gymeflix access through the selected provider’s account settings. Revocation does not by itself delete your Gymeflix account.</li>
+          <li><strong>Ad-free purchase:</strong> buy the ad-free option to remove ads from the App once the purchase is confirmed.</li>
+          <li><strong>Social sign-in:</strong> revoke Gymestix access through the selected provider’s account settings (Google, Apple, or X). Revocation does not by itself delete your Gymestix account.</li>
           <li><strong>Account deletion:</strong> use the methods described in the deletion section.</li>
         </ul>
       </section>
@@ -1228,16 +1212,12 @@
         <span class="section-number">12</span>
         <h2>How we protect information</h2>
         <p>
-          We use reasonable technical and organizational safeguards appropriate to the nature of
-          the information. These include encrypted HTTPS connections for backend requests, private
-          App storage for local authentication tokens and databases, authenticated requests for
-          account-linked sync, access controls on backend data, and data-minimization practices.
-          Profile-image uploads are sent using encrypted connections.
+          We use reasonable security measures to protect your information. Data is sent over encrypted connections, access to your account data is protected, and we limit what we collect to what’s needed to run the app.
         </p>
         <p>
           No device, transmission, or storage system is completely secure. You are responsible for
           protecting your device, email account, sign-in-provider account, and password. Contact us
-          promptly if you believe your Gymeflix account has been compromised.
+          promptly if you believe your Gymestix account has been compromised.
         </p>
       </section>
 
@@ -1245,12 +1225,7 @@
         <span class="section-number">13</span>
         <h2>International processing</h2>
         <p>
-          Gymeflix and its service providers may process information in countries other than the
-          country where you live. Those countries may have different data-protection laws. Where
-          required, we rely on appropriate safeguards for international transfers, such as adequacy
-          decisions, contractual protections, or other lawful transfer mechanisms. Supabase,
-          Google, social sign-in providers, and GitHub describe their own international processing
-          practices in the policies linked above.
+          Gymestix and its service providers may process your information in countries other than the one you live in. Those countries may have different privacy laws. Where required, we use appropriate safeguards for international data transfers. Our service providers describe their own practices in their privacy policies linked above.
         </p>
       </section>
 
@@ -1258,7 +1233,7 @@
         <span class="section-number">14</span>
         <h2>Children’s privacy</h2>
         <p>
-          Gymeflix is a general-audience fitness App and is not directed to children under 13. We
+          Gymestix is a general-audience fitness App and is not directed to children under 13. We
           do not knowingly collect personal information from a child under 13. Where local law sets
           a higher age for valid consent, a user below that age should use account features only
           with authorization from a parent or guardian.
@@ -1276,7 +1251,7 @@
         <h2>Fitness information is not medical advice</h2>
         <p>
           Height, weight, BMI, estimated body-fat percentage, workout performance, and related
-          information can be sensitive. Gymeflix uses these details to provide user-requested
+          information can be sensitive. Gymestix uses these details to provide user-requested
           fitness features and does not intentionally disclose them to advertisers for ad targeting.
           The App does not currently connect to Health Connect, Apple Health, healthcare providers,
           insurers, or employers.
@@ -1320,32 +1295,28 @@
         <span class="section-number">18</span>
         <h2>Contact us</h2>
         <p>
-          For privacy questions, rights requests, or account and data deletion, contact the Gymeflix
+          For privacy questions, rights requests, or account and data deletion, contact the Gymestix
           publisher using the following details:
         </p>
         <p>
-          <strong>App:</strong> Gymeflix<br>
-          <strong>Developer / publisher:</strong>Nsubuga Ibrahim (devGato)<br>
-          <strong>Privacy email:</strong>
-          <span class="placeholder">ibrahimnazel942@gmail.com</span><br>
-          <strong>Project:</strong>
-          <a href="https://github.com/NsubugaIbrahim/Gymetry" target="_blank" rel="noopener noreferrer">github.com/NsubugaIbrahim/Gymetry</a>
+          <strong>App:</strong> Gymestix<br>
+          <strong>Developer:</strong> Nsubuga Ibrahim<br>
+          <strong>Email:</strong>
+          <a href="mailto:ibrahimnazel942@gmail.com">ibrahimnazel942@gmail.com</a>
         </p>
-        <div class="callout warning">
-          <p>
-            <strong>Publisher action required:</strong> replace the privacy-email placeholder above
-            with a monitored email address before submitting this URL to Google Play or publishing
-            it as the final policy. A working contact is necessary for privacy and external account-deletion requests.
-          </p>
-        </div>
       </section>
     </main>
   </div>
 
   <footer>
     <div class="wrap">
-      <p><span class="footer-mark" aria-hidden="true">&#8203;</span>Gymeflix Privacy Center · Policy version 1.0</p>
-      <p>Designed as a static, tracker-free page for GitHub Pages.</p>
+      <p><span class="footer-mark" aria-hidden="true">&#8203;</span>Gymestix Privacy Center · Policy version 1.0</p>
+      <div class="legal-links">
+        <a href="index.html">Legal Center</a>
+        <a href="privacy.html" aria-current="page">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="support.html">Support</a>
+      </div>
     </div>
   </footer>
 
